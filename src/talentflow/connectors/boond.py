@@ -43,7 +43,8 @@ class BoondClient:
     timeout_s: int = 30
 
     def _headers(self) -> dict[str, str]:
-        headers = {"Content-Type": "application/json", "Accept": "application/json"}
+        headers = {"Content-Type": "application/json", "Accept": "application/json",
+                   "User-Agent": "TalentFlow/1.0"}
         if self.client_key:
             headers["X-Jwt-Client-BoondManager"] = boond_jwt(
                 self.client_token, self.user_token, self.client_key

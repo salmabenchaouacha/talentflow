@@ -106,3 +106,25 @@ def test_llm_extractor_falls_back_to_rules(fake_llm):
     need = ext.extract_need(NEED_TEXT)
     assert ext.fallback_count == 1
     assert need.max_daily_rate == 550
+
+
+def test_access_error_trips_circuit_breaker(monkeypatch):
+    import io
+    import urllib.error
+
+    from talentflow.llm.clients import OpenAICompatibleClient
+
+    calls = []
+
+    def fake_urlopen(req, timeout=0):
+        calls.append(req.headers)
+        raise urllib.error.HTTPError(req.full_url, 403, "Forbidden", {}, io.BytesIO(b"error code: 1010"))
+
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    llm = OpenAICompatibleClient(base_url="https://example.test/v1", api_key="k", model="m")
+    ext = LLMExtractor(llm, today=TODAY)
+    for _ in range(5):
+        ext.extract_need(NEED_TEXT)
+    assert len(calls) == 1                        # un seul appel réseau, puis coupe-circuit
+    assert "Talentflow" in calls[0]["User-agent"] or "TalentFlow" in calls[0]["User-agent"]
+    assert ext.fallback_count == 5

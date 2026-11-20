@@ -39,6 +39,11 @@ class LLMError(RuntimeError):
     pass
 
 
+# Certains fournisseurs (Groq via Cloudflare) rejettent l'agent par défaut « Python-urllib »
+# avec un HTTP 403 « error code: 1010 » : on s'identifie explicitement.
+USER_AGENT = "TalentFlow/1.0 (+https://github.com/salmabenchaouacha/talentflow)"
+
+
 @dataclass
 class LLMUsage:
     calls: int = 0
@@ -87,6 +92,7 @@ class LLMClient(ABC):
         self.timeout_s = timeout_s
         self.max_retries = max_retries
         self.usage = LLMUsage()
+        self.disabled_reason: str | None = None  # coupe-circuit après une erreur d'accès
 
     @abstractmethod
     def _chat(self, system: str, user: str, json_mode: bool) -> str: ...
@@ -117,6 +123,8 @@ class LLMClient(ABC):
         raise LLMError(f"Sortie LLM invalide après {self.max_retries + 1} essais : {last_error}")
 
     def _timed(self, system: str, user: str, json_mode: bool) -> str:
+        if self.disabled_reason:  # inutile de rappeler le fournisseur 90 fois
+            raise LLMError(self.disabled_reason)
         t0 = time.perf_counter()
         out = self._chat(system, user, json_mode)
         self.usage.calls += 1
@@ -129,7 +137,9 @@ class LLMClient(ABC):
         backoff = 1.5
         for attempt in range(4):
             req = urllib.request.Request(
-                url, data=data, headers={"Content-Type": "application/json", **headers}
+                url, data=data,
+                headers={"Content-Type": "application/json", "Accept": "application/json",
+                         "User-Agent": USER_AGENT, **headers},
             )
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout_s) as resp:
@@ -139,6 +149,12 @@ class LLMClient(ABC):
                 if exc.code in {429, 500, 502, 503, 504} and attempt < 3:
                     time.sleep(backoff ** (attempt + 1))
                     continue
+                if exc.code in {401, 403}:
+                    self.disabled_reason = (
+                        f"Accès refusé par le fournisseur LLM (HTTP {exc.code} : {body[:120]}). "
+                        "Vérifiez TF_LLM_API_KEY / TF_LLM_MODEL ; repli sur le mode hors-ligne."
+                    )
+                    log.error(self.disabled_reason)
                 raise LLMError(f"HTTP {exc.code} sur {url} : {body}") from exc
             except urllib.error.URLError as exc:
                 if attempt < 3:

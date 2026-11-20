@@ -77,7 +77,7 @@ class OpenAICompatibleEmbedder(Embedder):  # pragma: no cover - réseau
         out: list[list[float]] = []
         for i in range(0, len(texts), 64):
             payload = json.dumps({"model": self.model, "input": texts[i : i + 64]}).encode()
-            headers = {"Content-Type": "application/json"}
+            headers = {"Content-Type": "application/json", "User-Agent": "TalentFlow/1.0"}
             if self.api_key:
                 headers["Authorization"] = f"Bearer {self.api_key}"
             req = urllib.request.Request(f"{self.base_url}/embeddings", payload, headers)

@@ -178,6 +178,15 @@ class LLMClient(ABC):
                     return json.loads(resp.read().decode("utf-8"))
             except urllib.error.HTTPError as exc:
                 body = exc.read().decode("utf-8", errors="replace")[:500]
+                if exc.code == 429 and retry_delay(exc.headers, body, attempt, cap=1e9) > 90:
+                    # Quota journalier (TPD) ou attente très longue : inutile d'insister.
+                    self.disabled_reason = (
+                        "Quota du fournisseur LLM épuisé (attente demandée > 90 s, ex. limite "
+                        "de tokens par jour). Suite du traitement en mode hors-ligne. "
+                        "Changez de modèle (TF_LLM_MODEL) ou réessayez plus tard."
+                    )
+                    log.error(self.disabled_reason)
+                    raise LLMError(f"HTTP 429 sur {url} : {body}") from exc
                 if exc.code in {429, 500, 502, 503, 504} and attempt < attempts - 1:
                     wait = retry_delay(exc.headers, body, attempt)
                     log.warning("HTTP %s (limite de débit ou indisponibilité) : nouvel essai "

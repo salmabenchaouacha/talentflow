@@ -155,3 +155,26 @@ def test_json_skeleton_is_compact_and_readable():
     assert "AAAA-MM-JJ" in cand["availability_date"]
     full = json.dumps(CandidateProfile.model_json_schema())
     assert len(json.dumps(cand)) < len(full) / 2  # au moins 2x moins de tokens
+
+
+def test_daily_quota_trips_breaker_without_waiting(monkeypatch):
+    import io
+    import time as _time
+    import urllib.error
+
+    from talentflow.llm.clients import OpenAICompatibleClient
+
+    body = b'{"error":{"message":"tokens per day (TPD) ... Please try again in 15m10.22s."}}'
+    calls = []
+
+    def fake_urlopen(req, timeout=0):
+        calls.append(1)
+        raise urllib.error.HTTPError(req.full_url, 429, "Too Many", {}, io.BytesIO(body))
+
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    monkeypatch.setattr(_time, "sleep", lambda s: (_ for _ in ()).throw(AssertionError("attente")))
+    llm = OpenAICompatibleClient(base_url="https://example.test/v1", model="m")
+    ext = LLMExtractor(llm, today=TODAY)
+    for _ in range(3):
+        ext.extract_need(NEED_TEXT)
+    assert len(calls) == 1 and ext.fallback_count == 3

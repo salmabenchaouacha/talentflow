@@ -71,7 +71,9 @@ class TalentFlow:
             availability_tolerance_days=settings.availability_tolerance_days,
             today=today,
         )
-        return cls(settings, repo, build_extractor(llm, today=today), build_embedder(settings),
+        cache = settings.data_dir / ".llm_cache" / "extractions.json"
+        return cls(settings, repo, build_extractor(llm, today=today, cache_path=cache),
+                   build_embedder(settings),
                    engine, Pseudonymizer(use_presidio=settings.use_presidio), llm, today)
 
     # ------------------------------------------------------------ ingestion

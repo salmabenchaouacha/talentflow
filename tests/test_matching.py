@@ -109,3 +109,8 @@ def test_llm_judge_enforces_consistent_recommendation(need, fake_llm):
     assert verdict.score == 82 and verdict.recommendation == "proposer"
     # le juge ne reçoit ni identifiant ni nom de client
     assert "N1" not in llm.prompts[0] and "candidate_id" not in llm.prompts[0]
+
+
+def test_city_formats_from_llm_are_tolerated(need):
+    assert apply_filters(cand(city="Toulouse (31)"), need, TODAY).passed
+    assert apply_filters(cand(city="toulouse - hybride"), need, TODAY).passed

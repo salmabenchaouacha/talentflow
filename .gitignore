@@ -13,3 +13,4 @@ reports/
 models/*.gguf
 dbt/target/
 dbt/logs/
+data/.llm_cache/

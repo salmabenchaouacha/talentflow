@@ -60,6 +60,15 @@ def cmd_match(args) -> None:
             j = r.judge
             print(f"  #{r.rank} {r.candidate_id}  score={r.final_score:.2f}"
                   + (f"  juge={j.score} ({j.recommendation})\n     {j.justification}" if j else ""))
+        if args.explain:
+            print(f"  Besoin structuré : lieu={need.location!r} télétravail={need.remote_policy.value} "
+                  f"démarrage={need.start_date} TJM max={need.max_daily_rate} "
+                  f"séniorité={need.seniority.value if need.seniority else None} "
+                  f"langues={need.languages}")
+            for r in report.excluded[:8]:
+                c = flow.repo.get_candidate(r.candidate_id)
+                print(f"  ✗ {r.candidate_id} ({c.title}, {c.location}, dispo {c.availability_date}, "
+                      f"TJM {c.daily_rate}, langues {c.languages}) : {' ; '.join(r.filters.reasons)}")
 
 
 def cmd_eval(args) -> None:
@@ -191,6 +200,8 @@ def main(argv: list[str] | None = None) -> None:
     m.add_argument("need_id", nargs="?")
     m.add_argument("--all", action="store_true")
     m.add_argument("--mode", choices=["vector", "rules", "full"], default="full")
+    m.add_argument("--explain", action="store_true",
+                   help="affiche le besoin structuré et les motifs d'exclusion")
     m.set_defaults(func=cmd_match)
 
     e = sub.add_parser("eval")

@@ -10,14 +10,17 @@ Deux implémentations derrière la même interface :
 from __future__ import annotations
 
 import calendar
+import hashlib
+import json
 import logging
 import re
 from datetime import date, timedelta
+from pathlib import Path
 from typing import Protocol
 
 from talentflow.extraction.skills import detect_skills, normalize_skill
 from talentflow.llm.clients import LLMClient, LLMError
-from talentflow.llm.prompts import CV_EXTRACTION_SYSTEM, NEED_EXTRACTION_SYSTEM
+from talentflow.llm.prompts import CV_EXTRACTION_SYSTEM, NEED_EXTRACTION_SYSTEM, PROMPT_VERSION
 from talentflow.schemas import (
     CandidateProfile,
     Experience,
@@ -356,18 +359,48 @@ class RuleBasedExtractor:
 
 # ====================================================================== LLM
 class LLMExtractor:
-    """Extraction par LLM, avec repli automatique sur les règles en cas d'échec."""
+    """Extraction par LLM, avec repli automatique sur les règles en cas d'échec.
+
+    Cache disque optionnel (clé = modèle + version du prompt + texte pseudonymisé) :
+    relancer l'évaluation ne rappelle pas le LLM pour un document déjà traité, ce qui
+    économise les quotas. Le cache ne contient que des données pseudonymisées.
+    """
 
     name = "llm"
 
     def __init__(self, llm: LLMClient, fallback: RuleBasedExtractor | None = None,
-                 today: date | None = None) -> None:
+                 today: date | None = None, cache_path: str | Path | None = None) -> None:
         self.llm = llm
         self.today = today or date.today()
         self.fallback = fallback or RuleBasedExtractor(today=self.today)
         self.fallback_count = 0
+        self.cache_hits = 0
+        self.cache_path = Path(cache_path) if cache_path else None
+        self._cache: dict[str, dict] = {}
+        if self.cache_path and self.cache_path.exists():
+            try:
+                self._cache = json.loads(self.cache_path.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                self._cache = {}
+
+    def _key(self, kind: str, text: str) -> str:
+        raw = f"{self.llm.model}|{PROMPT_VERSION}|{kind}|{self.today}|{text}"
+        return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+    def _remember(self, key: str, value: dict) -> None:
+        if not self.cache_path:
+            return
+        self._cache[key] = value
+        self.cache_path.parent.mkdir(parents=True, exist_ok=True)
+        self.cache_path.write_text(json.dumps(self._cache, ensure_ascii=False), encoding="utf-8")
 
     def extract_cv(self, text: str, candidate_id: str = "") -> CandidateProfile:
+        key = self._key("cv", text)
+        if key in self._cache:
+            self.cache_hits += 1
+            profile = CandidateProfile.model_validate(self._cache[key])
+            profile.candidate_id = candidate_id
+            return profile
         user = f"Date du jour : {self.today.isoformat()}\n\nCV :\n\"\"\"\n{text[:MAX_CHARS]}\n\"\"\""
         try:
             profile = self.llm.complete_json(CV_EXTRACTION_SYSTEM, user, CandidateProfile)
@@ -375,15 +408,23 @@ class LLMExtractor:
             log.error("Extraction LLM du CV échouée, repli sur les règles : %s", exc)
             self.fallback_count += 1
             return self.fallback.extract_cv(text, candidate_id)
-        profile.candidate_id = candidate_id
         # Filet de sécurité : compétences citées dans le CV mais oubliées par le LLM
         known = profile.skill_names
         for name in detect_skills(text):
             if name not in known:
                 profile.skills.append(Skill(name=name))
+        profile.candidate_id = ""
+        self._remember(key, profile.model_dump(mode="json"))
+        profile.candidate_id = candidate_id
         return profile
 
     def extract_need(self, text: str, need_id: str = "") -> JobNeed:
+        key = self._key("need", text)
+        if key in self._cache:
+            self.cache_hits += 1
+            need = JobNeed.model_validate(self._cache[key])
+            need.need_id = need_id
+            return need
         user = f"Date du jour : {self.today.isoformat()}\n\nBesoin :\n\"\"\"\n{text[:MAX_CHARS]}\n\"\"\""
         try:
             need = self.llm.complete_json(NEED_EXTRACTION_SYSTEM, user, JobNeed)
@@ -391,10 +432,13 @@ class LLMExtractor:
             log.error("Extraction LLM du besoin échouée, repli sur les règles : %s", exc)
             self.fallback_count += 1
             return self.fallback.extract_need(text, need_id)
+        need.need_id = ""
+        self._remember(key, need.model_dump(mode="json"))
         need.need_id = need_id
         return need
 
 
-def build_extractor(llm: LLMClient | None, today: date | None = None) -> Extractor:
+def build_extractor(llm: LLMClient | None, today: date | None = None,
+                    cache_path: str | Path | None = None) -> Extractor:
     rules = RuleBasedExtractor(today=today)
-    return LLMExtractor(llm, fallback=rules, today=today) if llm else rules
+    return LLMExtractor(llm, fallback=rules, today=today, cache_path=cache_path) if llm else rules

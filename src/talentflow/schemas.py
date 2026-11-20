@@ -13,6 +13,26 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from talentflow.extraction.skills import normalize_skill
 
+_LANG_ALIASES = {
+    "français": ["francais", "french", "fr"], "anglais": ["english", "en", "anglaise"],
+    "espagnol": ["spanish", "español", "es"], "allemand": ["german", "deutsch", "de"],
+    "italien": ["italian", "it"], "arabe": ["arabic", "ar"], "portugais": ["portuguese", "pt"],
+    "néerlandais": ["dutch", "neerlandais", "nl"], "chinois": ["chinese", "mandarin", "zh"],
+    "japonais": ["japanese", "ja"], "russe": ["russian", "ru"],
+}
+
+
+def normalize_language(raw: str) -> str:
+    """'Anglais (courant)', 'English - C1', 'anglais professionnel' -> 'anglais'."""
+    v = raw.strip().lower()
+    for canon, aliases in _LANG_ALIASES.items():
+        for name in [canon, *aliases]:
+            if v == name or v.startswith(name + " ") or v.startswith(name + "(") \
+                    or v.startswith(name + ",") or v.startswith(name + "-") \
+                    or (len(name) > 3 and name in v):
+                return canon
+    return v.split("(")[0].split(" - ")[0].strip()
+
 
 class Seniority(str, Enum):
     JUNIOR = "junior"
@@ -110,10 +130,15 @@ class CandidateProfile(_Base):
     daily_rate: float | None = Field(default=None, ge=0, description="TJM en euros")
     summary: str = ""
 
-    @field_validator("languages", "mobility")
+    @field_validator("mobility")
     @classmethod
     def _lower_list(cls, v: list[str]) -> list[str]:
         return [x.strip().lower() for x in v if x and x.strip()]
+
+    @field_validator("languages")
+    @classmethod
+    def _langs(cls, v: list[str]) -> list[str]:
+        return list(dict.fromkeys(normalize_language(x) for x in v if x and x.strip()))
 
     @property
     def skill_names(self) -> set[str]:
@@ -170,7 +195,7 @@ class JobNeed(_Base):
     @field_validator("languages")
     @classmethod
     def _lower(cls, v: list[str]) -> list[str]:
-        return [x.strip().lower() for x in v if x and x.strip()]
+        return list(dict.fromkeys(normalize_language(x) for x in v if x and x.strip()))
 
     def embedding_text(self) -> str:
         return (

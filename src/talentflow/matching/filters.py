@@ -10,12 +10,17 @@ from datetime import date, timedelta
 
 from talentflow.schemas import CandidateProfile, FilterResult, JobNeed, RemotePolicy
 
-_REMOTE_WORDS = {"full remote", "remote", "télétravail", "teletravail", "france entière",
-                 "france", "toute la france"}
+_REMOTE_WORDS = {"full remote", "remote", "teletravail", "france entiere", "france",
+                 "toute la france", "100% remote", "teletravail complet"}
 
 
 def _norm_city(value: str | None) -> str:
-    return (value or "").strip().lower().replace("-", " ")
+    """'Toulouse (31)', 'toulouse - hybride', 'Saint-Étienne' -> forme comparable."""
+    import unicodedata
+
+    v = (value or "").split("(")[0].split(",")[0].split(" — ")[0].split(" - ")[0]
+    v = unicodedata.normalize("NFKD", v).encode("ascii", "ignore").decode()
+    return v.strip().lower().replace("-", " ")
 
 
 def check_location(c: CandidateProfile, n: JobNeed) -> tuple[bool, str | None]:
@@ -27,7 +32,7 @@ def check_location(c: CandidateProfile, n: JobNeed) -> tuple[bool, str | None]:
     mobility = {_norm_city(m) for m in c.mobility}
     if city in mobility:
         return True, None
-    if mobility & {"france", "france entière", "toute la france"}:
+    if mobility & {"france", "france entiere", "toute la france"}:
         return True, None
     if n.remote_policy == RemotePolicy.HYBRID and mobility & _REMOTE_WORDS:
         return True, "Mobilité en télétravail uniquement : à confirmer pour les jours sur site"

@@ -147,7 +147,10 @@ def run_evaluation(data_dir: str | Path = "data", settings: Settings | None = No
             if props:
                 prop_prec.append(sum(1 for c in props if gold.get(c, 0) > 0) / len(props))
             if mode == "full":
+                why = [f"{inv_cv[r.candidate_id]} : {' ; '.join(r.filters.reasons)}"
+                       for r in report.excluded if r.candidate_id in relevant]
                 per_need.append({
+                    "wrongly_excluded": why,
                     "need": gid, "title": truth["needs"][gid]["title"],
                     "relevant": len(relevant),
                     "proposed": [inv_cv[c] for c in props],
@@ -167,7 +170,9 @@ def run_evaluation(data_dir: str | Path = "data", settings: Settings | None = No
                      "completion_tokens": u.completion_tokens,
                      "median_latency_s": round(statistics.median(u.latency_s), 2)
                      if u.latency_s else None,
-                     "validation_retries": u.validation_retries}
+                     "validation_retries": u.validation_retries,
+                     "extraction_cache_hits": getattr(flow.extractor, "cache_hits", 0),
+                     "extraction_fallbacks": getattr(flow.extractor, "fallback_count", 0)}
 
     result = {
         "dataset": {"consultants": len(cv_map), "needs": len(need_map),
@@ -240,6 +245,10 @@ def to_markdown(r: dict) -> str:
     for p in r["per_need"]:
         props = ", ".join(f"{c} ({g})" for c, g in zip(p["proposed"], p["proposed_grades"]))
         lines.append(f"| {p['need']} · {p['title']} | {p['relevant']} | {props or '—'} |")
+    excl = [(p["need"], w) for p in r["per_need"] for w in p.get("wrongly_excluded", [])]
+    if excl:
+        lines += ["", "### Profils pertinents exclus par les filtres (à analyser)", ""]
+        lines += [f"- {n} → {w}" for n, w in excl]
     if r.get("llm_usage"):
         lines += ["", "## 5. Coût LLM", "```", json.dumps(r["llm_usage"], indent=2), "```"]
     return "\n".join(lines) + "\n"

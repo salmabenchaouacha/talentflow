@@ -178,3 +178,23 @@ def test_daily_quota_trips_breaker_without_waiting(monkeypatch):
     for _ in range(3):
         ext.extract_need(NEED_TEXT)
     assert len(calls) == 1 and ext.fallback_count == 3
+
+
+def test_llm_output_variants_are_normalized():
+    from talentflow.schemas import CandidateProfile, JobNeed
+
+    c = CandidateProfile(title="x", seniority="senior", years_experience=5,
+                         languages=["Français (natif)", "English - C1", "anglais"])
+    assert c.languages == ["français", "anglais"]
+    n = JobNeed(title="x", languages=["Anglais courant"])
+    assert n.languages == ["anglais"]
+
+
+def test_extraction_cache_avoids_second_llm_call(fake_llm, tmp_path):
+    cache = tmp_path / "cache.json"
+    llm = fake_llm([VALID_NEED])
+    LLMExtractor(llm, today=TODAY, cache_path=cache).extract_need("texte", "N1")
+    second = LLMExtractor(llm, today=TODAY, cache_path=cache)  # nouvelle exécution
+    need = second.extract_need("texte", "N2")
+    assert need.need_id == "N2" and second.cache_hits == 1
+    assert llm.usage.calls == 1

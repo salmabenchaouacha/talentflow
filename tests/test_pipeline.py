@@ -113,3 +113,9 @@ def test_prospection_and_market(flow, tmp_path):
         assert c.candidate_id not in email["body"]
     report = flow.market_report()
     assert report["gaps"] and report["trends"]
+
+
+def test_reset_empties_database(flow):
+    _seed(flow)
+    flow.repo.reset()
+    assert flow.repo.count("candidates") == 0 and flow.repo.count("documents") == 0

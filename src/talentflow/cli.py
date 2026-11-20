@@ -138,6 +138,8 @@ def cmd_demo(args) -> None:
     truth = json.loads((settings.data_dir / "synthetic" / "ground_truth.json").read_text("utf-8"))
     today = date.fromisoformat(truth["reference_date"])
     flow = _flow(today)
+    if settings.is_postgres:
+        flow.repo.reset()
 
     print(f"2/6 Ingestion de {stats['consultants']} CV et {stats['needs']} besoins "
           "(pseudonymisation → extraction → embeddings)…")

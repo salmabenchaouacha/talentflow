@@ -172,6 +172,12 @@ class Repository:
         for s in stmts:
             self.execute(s)
 
+    def reset(self) -> None:
+        """Vide toutes les tables (démo uniquement)."""
+        for table in ("matches", "candidate_embeddings", "candidates", "needs", "pii_vault",
+                      "documents", "prospection_emails", "audit_log", "pipeline_runs"):
+            self.execute(f"DELETE FROM {table}")
+
     # ------------------------------------------------------------- documents
     def find_document(self, sha256: str) -> dict | None:
         return self.one("SELECT * FROM documents WHERE sha256 = ?", (sha256,))

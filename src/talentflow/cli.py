@@ -124,7 +124,8 @@ def cmd_demo(args) -> None:
     for old in (settings.output_dir / "dossiers").glob("*.docx"):
         old.unlink()
     print("1/6 Génération des données synthétiques…")
-    stats = generate(settings.data_dir, seed=args.seed)
+    stats = generate(settings.data_dir, n_consultants=args.consultants, n_needs=args.needs,
+                     seed=args.seed)
     truth = json.loads((settings.data_dir / "synthetic" / "ground_truth.json").read_text("utf-8"))
     today = date.fromisoformat(truth["reference_date"])
     flow = _flow(today)
@@ -206,6 +207,9 @@ def main(argv: list[str] | None = None) -> None:
 
     d = sub.add_parser("demo")
     d.add_argument("--seed", type=int, default=42)
+    d.add_argument("--consultants", type=int, default=60,
+                   help="taille du vivier (réduire avec un LLM gratuit à débit limité)")
+    d.add_argument("--needs", type=int, default=15)
     d.set_defaults(func=cmd_demo)
 
     args = parser.parse_args(argv)

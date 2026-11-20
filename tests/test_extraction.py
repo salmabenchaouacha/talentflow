@@ -128,3 +128,13 @@ def test_access_error_trips_circuit_breaker(monkeypatch):
     assert len(calls) == 1                        # un seul appel réseau, puis coupe-circuit
     assert "Talentflow" in calls[0]["User-agent"] or "TalentFlow" in calls[0]["User-agent"]
     assert ext.fallback_count == 5
+
+
+def test_retry_delay_parsing():
+    from talentflow.llm.clients import retry_delay
+
+    body = '{"error":{"message":"Rate limit reached... Please try again in 11.1375s. Need more"}}'
+    assert retry_delay({}, body, 0) == pytest.approx(11.6375)
+    assert retry_delay({}, "try again in 1m2.5s", 0) == pytest.approx(60.0)  # plafonné
+    assert retry_delay({"retry-after": "3"}, "", 0) == 3.5
+    assert retry_delay({}, "", 2) == 8.0

@@ -134,8 +134,8 @@ class LLMClient(ABC):
     # ------------------------------------------------------------- HTTP
     def _post(self, url: str, payload: dict, headers: dict[str, str]) -> dict:
         data = json.dumps(payload).encode("utf-8")
-        backoff = 1.5
-        for attempt in range(4):
+        attempts = 6
+        for attempt in range(attempts):
             req = urllib.request.Request(
                 url, data=data,
                 headers={"Content-Type": "application/json", "Accept": "application/json",
@@ -146,8 +146,11 @@ class LLMClient(ABC):
                     return json.loads(resp.read().decode("utf-8"))
             except urllib.error.HTTPError as exc:
                 body = exc.read().decode("utf-8", errors="replace")[:500]
-                if exc.code in {429, 500, 502, 503, 504} and attempt < 3:
-                    time.sleep(backoff ** (attempt + 1))
+                if exc.code in {429, 500, 502, 503, 504} and attempt < attempts - 1:
+                    wait = retry_delay(exc.headers, body, attempt)
+                    log.warning("HTTP %s (limite de débit ou indisponibilité) : nouvel essai "
+                                "dans %.1f s", exc.code, wait)
+                    time.sleep(wait)
                     continue
                 if exc.code in {401, 403}:
                     self.disabled_reason = (
@@ -155,13 +158,33 @@ class LLMClient(ABC):
                         "Vérifiez TF_LLM_API_KEY / TF_LLM_MODEL ; repli sur le mode hors-ligne."
                     )
                     log.error(self.disabled_reason)
+                if exc.code in {400, 404} and "model" in body.lower():
+                    self.disabled_reason = f"Modèle introuvable ou invalide : {body[:200]}"
+                    log.error(self.disabled_reason)
                 raise LLMError(f"HTTP {exc.code} sur {url} : {body}") from exc
             except urllib.error.URLError as exc:
-                if attempt < 3:
-                    time.sleep(backoff ** (attempt + 1))
+                if attempt < attempts - 1:
+                    time.sleep(2 ** attempt)
                     continue
                 raise LLMError(f"Connexion impossible à {url} : {exc}") from exc
         raise LLMError("Nombre maximal de tentatives atteint")
+
+
+def retry_delay(headers, body: str, attempt: int, cap: float = 60.0) -> float:
+    """Délai d'attente : en-tête Retry-After, sinon « try again in 11.1s » (Groq, OpenAI),
+    sinon backoff exponentiel."""
+    value = headers.get("retry-after") if headers else None
+    if value:
+        try:
+            return min(cap, float(value) + 0.5)
+        except ValueError:
+            pass
+    m = re.search(r"try again in (?:(\d+)m)?([\d.]+)(ms|s)", body)
+    if m:
+        minutes = int(m.group(1) or 0)
+        secs = float(m.group(2)) / (1000 if m.group(3) == "ms" else 1)
+        return min(cap, minutes * 60 + secs + 0.5)
+    return min(cap, 2.0 * (2 ** attempt))
 
 
 class OpenAICompatibleClient(LLMClient):

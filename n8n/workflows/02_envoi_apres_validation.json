@@ -187,14 +187,7 @@
     "executionOrder": "v1",
     "timezone": "Europe/Paris"
   },
-  "tags": [
-    {
-      "name": "talentflow"
-    },
-    {
-      "name": "human-in-the-loop"
-    }
-  ],
+  "tags": [],
   "pinData": {},
   "meta": {
     "templateCredsSetupCompleted": false

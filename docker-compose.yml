@@ -50,6 +50,7 @@ services:
     env_file: .env
     environment:
       N8N_BLOCK_ENV_ACCESS_IN_NODE: "false"
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
       TF_API_BASE_URL: http://api:8000
       GENERIC_TIMEZONE: Europe/Paris
       N8N_SECURE_COOKIE: "false"

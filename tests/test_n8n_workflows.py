@@ -28,3 +28,8 @@ def test_workflow_graph_is_consistent(path):
         assert n["parameters"]["url"].startswith("={{ $env.TF_API_BASE_URL }}")
         headers = n["parameters"]["headerParameters"]["parameters"]
         assert any(h["name"] == "X-API-Key" for h in headers)
+
+
+def test_no_tags_to_avoid_duplicate_tag_import_error():
+    for path in WORKFLOWS:
+        assert json.loads(path.read_text(encoding="utf-8")).get("tags") == []

@@ -12,6 +12,7 @@ import requests
 import streamlit as st
 
 API = os.environ.get("TF_API_BASE_URL", "http://localhost:8000")
+SENIORITY = {"junior": "junior", "confirme": "confirmé", "senior": "senior", "expert": "expert"}
 KEY = os.environ.get("TF_API_KEY", "change-me")
 HEADERS = {"X-API-Key": KEY}
 
@@ -78,7 +79,8 @@ if page == "Propositions à valider":
                  "rejected": "🔴 Rejeté", "sent": "📤 Envoyé"}[status]
         with st.container(border=True):
             top = st.columns([3, 1, 1, 1])
-            top[0].subheader(f"#{m['rank']} · {m['candidate_title']} ({m['seniority']}, "
+            top[0].subheader(f"#{m['rank']} · {m['candidate_title']} "
+                             f"({SENIORITY.get(m['seniority'], m['seniority'])}, "
                              f"{m['years_experience']:g} ans)")
             top[1].metric("Score final", f"{m['final_score'] * 100:.0f}")
             top[2].metric("Juge IA", judge.get("score", "—"))

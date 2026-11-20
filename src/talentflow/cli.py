@@ -142,11 +142,13 @@ def cmd_demo(args) -> None:
     for nid in need_ids:
         flow.match_need(nid, actor="demo")
 
-    print("4/6 Validation humaine simulée (1er profil validé, profils « à étudier » rejetés)…")
+    print("4/6 Validation humaine simulée (meilleur profil validé, profils « à étudier » rejetés)…")
     dossiers = []
-    for m in flow.repo.list_matches(status=MatchStatus.PENDING.value):
+    seen_needs: set[str] = set()
+    for m in flow.repo.list_matches(status=MatchStatus.PENDING.value):  # triés par rang
         rec = (m["detail"].get("judge") or {}).get("recommendation")
-        if m["rank"] == 1:
+        if m["need_id"] not in seen_needs:
+            seen_needs.add(m["need_id"])
             transition(flow.repo, m["match_id"], MatchStatus.VALIDATED, "demo@esn.fr")
             dossiers.append(flow.generate_dossier(m["match_id"], actor="demo@esn.fr"))
         elif rec == "a_etudier":

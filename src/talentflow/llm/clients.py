@@ -53,6 +53,36 @@ class LLMUsage:
     validation_retries: int = 0
 
 
+def json_skeleton(schema: dict, defs: dict | None = None) -> object:
+    """Transforme un schéma JSON Pydantic en gabarit lisible :
+    {"score": "integer 0-100", "skills": [{"name": "string", ...}], ...}."""
+    defs = defs if defs is not None else schema.get("$defs", {})
+    if "$ref" in schema:
+        return json_skeleton(defs[schema["$ref"].split("/")[-1]], defs)
+    for key in ("anyOf", "oneOf"):
+        if key in schema:
+            options = [o for o in schema[key] if o.get("type") != "null"]
+            out = json_skeleton(options[0], defs) if options else "null"
+            return f"{out} ou null" if isinstance(out, str) else out
+    if "enum" in schema:
+        return " | ".join(str(v) for v in schema["enum"])
+    if "const" in schema:
+        return schema["const"]
+    t = schema.get("type")
+    if t == "object" or "properties" in schema:
+        return {k: json_skeleton(v, defs) for k, v in schema.get("properties", {}).items()}
+    if t == "array":
+        return [json_skeleton(schema.get("items", {}), defs)]
+    label = {"string": "texte", "integer": "entier", "number": "nombre",
+             "boolean": "true/false"}.get(t, "valeur")
+    if schema.get("format") == "date":
+        label = "AAAA-MM-JJ"
+    lo, hi = schema.get("minimum"), schema.get("maximum")
+    if lo is not None and hi is not None:
+        label += f" {lo}-{hi}"
+    return label
+
+
 def extract_json(text: str) -> dict:
     """Récupère le premier objet JSON d'une réponse (tolère ```json … ``` et du texte autour)."""
     text = text.strip()
@@ -101,10 +131,12 @@ class LLMClient(ABC):
         return self._timed(system, user, json_mode=False)
 
     def complete_json(self, system: str, user: str, schema: type[T]) -> T:
-        schema_hint = json.dumps(schema.model_json_schema(), ensure_ascii=False)
+        # Gabarit compact plutôt que le schéma JSON complet : moins de tokens, et le modèle
+        # ne risque plus de recopier le schéma au lieu de répondre.
+        skeleton = json.dumps(json_skeleton(schema.model_json_schema()), ensure_ascii=False)
         sys_prompt = (
-            f"{system}\n\nRéponds UNIQUEMENT avec un objet JSON valide conforme à ce "
-            f"schéma JSON :\n{schema_hint}"
+            f"{system}\n\nRéponds UNIQUEMENT avec un objet JSON (sans texte autour) qui suit "
+            f"ce gabarit, en remplaçant chaque type par la vraie valeur :\n{skeleton}"
         )
         prompt = user
         last_error: Exception | None = None

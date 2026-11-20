@@ -138,3 +138,20 @@ def test_retry_delay_parsing():
     assert retry_delay({}, "try again in 1m2.5s", 0) == pytest.approx(60.0)  # plafonné
     assert retry_delay({"retry-after": "3"}, "", 0) == 3.5
     assert retry_delay({}, "", 2) == 8.0
+
+
+def test_json_skeleton_is_compact_and_readable():
+    import json
+
+    from talentflow.llm.clients import json_skeleton
+    from talentflow.schemas import CandidateProfile, JudgeVerdict
+
+    sk = json_skeleton(JudgeVerdict.model_json_schema())
+    assert sk["score"] == "entier 0-100"
+    assert sk["recommendation"] == "proposer | a_etudier | ecarter"
+    assert sk["strengths"] == ["texte"]
+    cand = json_skeleton(CandidateProfile.model_json_schema())
+    assert cand["skills"][0]["name"] == "texte"
+    assert "AAAA-MM-JJ" in cand["availability_date"]
+    full = json.dumps(CandidateProfile.model_json_schema())
+    assert len(json.dumps(cand)) < len(full) / 2  # au moins 2x moins de tokens

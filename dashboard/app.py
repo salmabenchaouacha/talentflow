@@ -119,6 +119,8 @@ if page == "Propositions à valider":
 
 # ================================================================== Dashboard
 elif page == "Tableau de bord hebdo":
+    import altair as alt
+
     st.header("Pilotage hebdomadaire")
     data = api("GET", "/metrics/weekly") or {}
     weeks = pd.DataFrame(data.get("weeks", []))
@@ -126,29 +128,72 @@ elif page == "Tableau de bord hebdo":
         st.info("Pas encore de données.")
         st.stop()
     last = weeks.iloc[-1]
+
+    def fmt(value, pattern):
+        return pattern.format(value) if pd.notna(value) else "—"
+
     k = st.columns(5)
     k[0].metric("Besoins traités", int(last["needs_received"]))
     k[1].metric("CV analysés", int(last["cvs_ingested"]))
-    k[2].metric("Propositions", int(last["proposals"]))
-    k[3].metric("Taux de validation",
-                f"{last['validation_rate']:.0%}" if pd.notna(last["validation_rate"]) else "—")
-    k[4].metric("Délai médian besoin → proposition",
-                f"{last['median_minutes_to_proposal']:.0f} min"
-                if pd.notna(last["median_minutes_to_proposal"]) else "—")
-    st.caption("Semaine " + last["week"] + ". Temps gagné estimé : "
-               f"{last['estimated_hours_saved']} h (hypothèse : 2 h de travail manuel par besoin "
-               "et 30 min par dossier, à mesurer avec l'équipe).")
-    c1, c2 = st.columns(2)
-    c1.subheader("Volume par semaine")
-    c1.bar_chart(weeks.set_index("week")[["needs_received", "proposals", "validated"]])
+    k[2].metric("Profils proposés", int(last["proposals"]))
+    k[3].metric("Taux de validation", fmt(last["validation_rate"], "{:.0%}"))
+    k[4].metric("Délai besoin → proposition", fmt(last["median_minutes_to_proposal"], "{:.0f} min"))
+    st.caption(f"Semaine {last['week']}. Temps gagné estimé : {last['estimated_hours_saved']} h "
+               "(hypothèse : 2 h de travail manuel par besoin et 30 min par dossier, "
+               "à mesurer avec l'équipe).")
+
+    c1, c2 = st.columns([3, 2])
+    c1.subheader("Entonnoir de la semaine")
+    funnel = pd.DataFrame({
+        "Étape": ["CV analysés", "Besoins reçus", "Profils proposés", "Profils validés",
+                  "Dossiers envoyés"],
+        "Nombre": [int(last["cvs_ingested"]), int(last["needs_received"]),
+                   int(last["proposals"]), int(last["validated"]), int(last["sent"])],
+    })
+    bars = alt.Chart(funnel).mark_bar(cornerRadiusEnd=4, color="#2E86AB").encode(
+        x=alt.X("Nombre:Q", title=None),
+        y=alt.Y("Étape:N", sort=None, title=None),
+        tooltip=["Étape", "Nombre"],
+    )
+    labels = bars.mark_text(align="left", dx=4, color="#1F3A5F").encode(text="Nombre:Q")
+    c1.altair_chart((bars + labels).properties(height=230), use_container_width=True)
+
     c2.subheader("Qualité")
-    c2.line_chart(weeks.set_index("week")[["validation_rate", "avg_final_score"]])
+    q1, q2 = c2.columns(2)
+    q1.metric("Score final moyen", fmt(last["avg_final_score"], "{:.0%}"))
+    q2.metric("Note moyenne du juge IA", fmt(last["avg_judge_score"], "{:.0f} / 100"))
+    q3, q4 = c2.columns(2)
+    q3.metric("Profils rejetés", int(last["rejected"]))
+    h = last["median_hours_to_review"]
+    q4.metric("Délai médian de validation",
+              "—" if pd.isna(h) else f"{h * 60:.0f} min" if h < 1 else f"{h:.1f} h")
+
+    if len(weeks) > 1:
+        st.subheader("Évolution par semaine")
+        hist = weeks.rename(columns={"week": "Semaine", "needs_received": "Besoins reçus",
+                                     "proposals": "Profils proposés", "validated": "Validés"})
+        long = hist.melt("Semaine", ["Besoins reçus", "Profils proposés", "Validés"],
+                         var_name="Indicateur", value_name="Nombre")
+        st.altair_chart(alt.Chart(long).mark_line(point=True).encode(
+            x="Semaine:N", y="Nombre:Q", color="Indicateur:N"), use_container_width=True)
+
     pool = data.get("pool", {})
     st.subheader(f"Vivier : {pool.get('candidates', 0)} consultants")
     p1, p2 = st.columns(2)
-    p1.bar_chart(pd.Series(pool.get("by_seniority", {}), name="consultants"))
-    p2.dataframe(pd.DataFrame(pool.get("top_skills", []), columns=["Compétence", "Consultants"]),
-                 hide_index=True, use_container_width=True)
+    order = ["junior", "confirme", "senior", "expert"]
+    sen = pd.DataFrame([{"Séniorité": SENIORITY[s].capitalize(),
+                         "Consultants": pool.get("by_seniority", {}).get(s, 0)} for s in order])
+    p1.altair_chart(alt.Chart(sen).mark_bar(color="#1F3A5F").encode(
+        x=alt.X("Séniorité:N", sort=[SENIORITY[s].capitalize() for s in order], title=None,
+                axis=alt.Axis(labelAngle=0)),
+        y=alt.Y("Consultants:Q", title=None), tooltip=["Séniorité", "Consultants"],
+    ).properties(height=320, title="Répartition par séniorité"), use_container_width=True)
+    top = pd.DataFrame(pool.get("top_skills", []), columns=["Compétence", "Consultants"]).head(10)
+    p2.altair_chart(alt.Chart(top).mark_bar(color="#2E86AB").encode(
+        x=alt.X("Consultants:Q", title=None),
+        y=alt.Y("Compétence:N", sort="-x", title=None, axis=alt.Axis(labelOverlap=False)),
+        tooltip=["Compétence", "Consultants"],
+    ).properties(height=320, title="Compétences les plus présentes"), use_container_width=True)
     if data.get("rejection_reasons"):
         st.subheader("Motifs de rejet (à réinjecter dans le matching)")
         st.dataframe(pd.DataFrame(data["rejection_reasons"], columns=["Motif", "Nombre"]),
@@ -162,14 +207,20 @@ elif page == "Veille marché":
                "publiques analysés.")
     gaps = pd.DataFrame(data.get("gaps", []))
     if not gaps.empty:
-        st.dataframe(gaps, hide_index=True, use_container_width=True)
+        gaps = gaps.rename(columns={"skill": "Compétence", "demand_score": "Demande",
+                                    "available_consultants": "Consultants disponibles",
+                                    "coverage_ratio": "Couverture", "action": "Action"})
+        st.dataframe(gaps, hide_index=True, use_container_width=True, height=420)
         st.markdown("**À sourcer** : demande forte, peu de consultants disponibles. "
                     "**À pousser en prospection** : consultants disponibles sur une compétence "
                     "demandée.")
     tr = pd.DataFrame(data.get("trends", []))
     if not tr.empty:
         st.subheader("Tendances (4 dernières semaines vs 4 précédentes)")
-        st.bar_chart(tr.set_index("skill")[["posts_recent", "posts_previous"]])
+        tr = tr.rename(columns={"skill": "Compétence", "posts_recent": "4 dernières semaines",
+                                "posts_previous": "4 semaines précédentes"})
+        st.bar_chart(tr.set_index("Compétence")[["4 semaines précédentes", "4 dernières semaines"]],
+                     stack=False)
 
 # ================================================================ Prospection
 elif page == "Prospection":

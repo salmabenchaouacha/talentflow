@@ -1,0 +1,14 @@
+FICHE DE BESOIN — RÉF GT-N09
+Client : Garonne Énergie (secteur énergie)
+Intitulé : Ingénieur Data senior
+Contexte : Au sein de la DSI de Garonne Énergie, renfort d'une équipe sur un projet de conception de pipelines d'ingestion batch et streaming.
+Compétences obligatoires : SQL, Airflow, Python
+Compétences souhaitées : AWS, PostgreSQL
+Expérience : 6 ans minimum
+Séniorité : senior
+Lieu : Lyon
+Télétravail : 2 jours/semaine (hybride)
+Démarrage : ASAP
+Durée : 3 mois
+TJM max : 600 €
+Contact client : Bilel Mansouri — bilel@garonneenergie.fr — 05 61 37 22 33

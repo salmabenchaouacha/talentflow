@@ -1,0 +1,241 @@
+published,company,sector,city,title,skills
+2026-10-17,AssurOuest,assurance,Toulouse,Data Scientist,Python|Machine Learning|Pandas|PyTorch|MLOps
+2026-10-23,BanqueSud,banque,Nantes,Développeur Low-code,n8n|Microsoft 365|Power Automate|SQL|LLM
+2026-10-11,Retailia,retail,Paris,Ingénieur Java Spring,Spring Boot|Microservices|Java|Git|Kafka
+2026-11-03,Occitel,télécoms,Toulouse,Ingénieur .NET Azure,SQL Server|REST API|.NET|Docker|Git
+2026-10-08,Occitel,télécoms,Toulouse,Ingénieur DevOps,CI/CD|Docker|Kubernetes|GCP|Python
+2026-11-05,Novasys Industrie,industrie,Paris,Machine Learning Engineer,Machine Learning|Pandas|SQL|NLP|Spark
+2026-10-25,BanqueSud,banque,Lyon,AI Engineer,Python|LangChain|RAG|Prompt Engineering|Docker
+2026-10-22,Novasys Industrie,industrie,Bordeaux,Chef de projet Data,Gestion de projet|Agile Scrum|Microsoft 365|SQL
+2026-10-26,AssurOuest,assurance,Toulouse,Machine Learning Engineer,Machine Learning|Pandas|SQL|Deep Learning|Computer Vision
+2026-11-12,LogiRail,transport,Paris,Développeur C# .NET,SQL Server|REST API|C#|Azure|Tests automatisés
+2026-11-19,Capitole Finance,banque,Toulouse,Data Engineer Cloud,SQL|dbt|Spark|Snowflake|Kafka
+2026-11-12,Garonne Énergie,énergie,Toulouse,Ingénieur Automatisation & IA,n8n|Power Automate|Python|Azure|LLM
+2026-10-09,Occitel,télécoms,Paris,QA Engineer,Selenium|Tests automatisés|Agile Scrum|Python|JavaScript
+2026-11-14,LogiRail,transport,Paris,Data Engineer,Python|SQL|Airflow|BigQuery|AWS
+2026-11-20,Capitole Finance,banque,Toulouse,Développeur Front-end,JavaScript|TypeScript|HTML/CSS|Tests automatisés|Node.js
+2026-10-05,BanqueSud,banque,Bordeaux,Ingénieur DevOps,Terraform|Linux|Kubernetes|Azure|Prometheus
+2026-10-10,Occitel,télécoms,Toulouse,Chef de projet Data,Gestion de projet|Agile Scrum|Salesforce|Power BI
+2026-11-07,Occitel,télécoms,Nantes,Développeur .NET,REST API|SQL Server|.NET|Angular|Azure
+2026-10-03,CityMobility,mobilité,Toulouse,Data Engineer Cloud,dbt|Airflow|SQL|Docker|BigQuery
+2026-11-15,Retailia,retail,Nantes,Ingénieur IA,FastAPI|RAG|LangChain|LangGraph|Prompt Engineering
+2026-10-18,MedAlpha,santé,Toulouse,Développeur .NET,REST API|.NET|C#|Angular|Microservices
+2026-10-20,BanqueSud,banque,Nantes,Développeur Web Front,JavaScript|TypeScript|React|Vue.js|Tests automatisés
+2026-10-25,AgriData Sud,agroalimentaire,Toulouse,AI Engineer,LLM|LangChain|Python|LangGraph|Azure
+2026-11-07,Aeronov,aéronautique,Lyon,Ingénieur Data,dbt|Airflow|Spark|Databricks|AWS
+2026-10-07,AgriData Sud,agroalimentaire,Toulouse,Développeur Java,Microservices|Spring Boot|SQL|Kafka|Kubernetes
+2026-09-30,Novasys Industrie,industrie,Lyon,Data Scientist,Pandas|Python|Machine Learning|Computer Vision|MLOps
+2026-11-17,AssurOuest,assurance,Toulouse,Ingénieur IA générative,Python|LangChain|RAG|Azure|LangGraph
+2026-10-09,BanqueSud,banque,Toulouse,DevOps Cloud,Docker|Kubernetes|Terraform|AWS|Azure
+2026-10-18,Capitole Finance,banque,Bordeaux,Développeur Back-end Java,REST API|Spring Boot|SQL|Docker|Hibernate
+2026-10-05,Pyrénées Santé,santé,Toulouse,Développeur Low-code,Python|Power Automate|n8n|LLM|SQL
+2026-10-15,LogiRail,transport,Bordeaux,Développeur .NET,REST API|SQL Server|.NET|Azure|Microservices
+2026-10-28,Pyrénées Santé,santé,Toulouse,Data Scientist,Python|SQL|Pandas|Computer Vision|Spark
+2026-11-05,Novasys Industrie,industrie,Paris,Data Engineer Cloud,dbt|SQL|Python|PostgreSQL|Snowflake
+2026-10-04,MedAlpha,santé,Toulouse,Développeur Front-end,React|JavaScript|TypeScript|GraphQL|Angular
+2026-10-15,SkyPort Services,aéronautique,Montpellier,AI Engineer,Python|LLM|FastAPI|NLP|Azure
+2026-11-16,Capitole Finance,banque,Toulouse,Ingénieur Automatisation & IA,Power Automate|Microsoft 365|n8n|Make|SQL
+2026-11-08,Pyrénées Santé,santé,Montpellier,Ingénieur IA,RAG|LLM|LangChain|Docker|Azure
+2026-10-05,Pyrénées Santé,santé,Toulouse,Testeur automaticien,Selenium|Agile Scrum|Tests automatisés|JavaScript|Java
+2026-10-11,Aeronov,aéronautique,Toulouse,Développeur Low-code,Power Automate|Python|Microsoft 365|Salesforce|LLM
+2026-11-05,Aeronov,aéronautique,Nantes,Ingénieur IA générative,LLM|RAG|Python|LangGraph|Vector Databases
+2026-10-25,Novasys Industrie,industrie,Paris,Développeur Web Front,HTML/CSS|React|JavaScript|Git|Node.js
+2026-09-29,Retailia,retail,Toulouse,Développeur Back-end Java,Microservices|Java|Spring Boot|Hibernate|Docker
+2026-09-27,Pyrénées Santé,santé,Toulouse,Ingénieur IA,LangChain|RAG|LLM|Hugging Face|Docker
+2026-11-12,Retailia,retail,Toulouse,DevOps Cloud,Docker|Kubernetes|Linux|Azure|Prometheus
+2026-11-13,Pyrénées Santé,santé,Bordeaux,Développeur Java,Spring Boot|SQL|Microservices|PostgreSQL|Kubernetes
+2026-11-10,Garonne Énergie,énergie,Toulouse,Ingénieur SRE,Linux|Docker|CI/CD|GCP|Ansible
+2026-11-05,AssurOuest,assurance,Toulouse,Product Owner,Gestion de projet|Agile Scrum|SQL|Power BI
+2026-09-27,CityMobility,mobilité,Bordeaux,Développeur Java,Microservices|Spring Boot|Java|PostgreSQL|Kafka
+2026-11-13,Capitole Finance,banque,Toulouse,Data Engineer Cloud,SQL|Spark|Python|PostgreSQL|Kafka
+2026-10-10,Retailia,retail,Nantes,Ingénieur Data,Airflow|Python|dbt|Snowflake|BigQuery
+2026-09-30,Capitole Finance,banque,Toulouse,Data Engineer Cloud,Airflow|Python|dbt|Kafka|Snowflake
+2026-10-24,AssurOuest,assurance,Toulouse,Consultant Automatisation,REST API|Python|n8n|Azure|Salesforce
+2026-11-09,LogiRail,transport,Toulouse,AI Engineer,LLM|Python|RAG|Azure|NLP
+2026-10-20,SkyPort Services,aéronautique,Toulouse,Développeur Java,SQL|Java|Microservices|Kubernetes|PostgreSQL
+2026-10-10,SkyPort Services,aéronautique,Toulouse,Ingénieur Automatisation & IA,n8n|Python|Microsoft 365|Azure|LLM
+2026-10-29,SkyPort Services,aéronautique,Toulouse,Ingénieur QA,Tests automatisés|Agile Scrum|Selenium|Python|Java
+2026-11-19,Pyrénées Santé,santé,Lyon,Consultant Automatisation,Power Automate|Python|n8n|SQL|LLM
+2026-11-10,AgriData Sud,agroalimentaire,Toulouse,Data Engineer,SQL|Airflow|dbt|PostgreSQL|Databricks
+2026-10-15,Pyrénées Santé,santé,Paris,Développeur Low-code,REST API|Power Automate|Python|Zapier|Azure
+2026-10-07,Retailia,retail,Paris,Ingénieur IA,Python|RAG|LangChain|Azure|Vector Databases
+2026-09-28,LogiRail,transport,Toulouse,Chef de projet IT,Agile Scrum|Gestion de projet|Microsoft 365|SAP
+2026-10-13,SkyPort Services,aéronautique,Bordeaux,Data Scientist NLP,Pandas|Python|Machine Learning|Spark|NLP
+2026-10-06,Pyrénées Santé,santé,Lyon,Data Scientist,Scikit-learn|Python|Pandas|NLP|Spark
+2026-10-02,SkyPort Services,aéronautique,Toulouse,Data Engineer,Airflow|Python|SQL|Databricks|PostgreSQL
+2026-10-30,Occitel,télécoms,Toulouse,Ingénieur IA générative,LLM|LangChain|RAG|Hugging Face|Prompt Engineering
+2026-10-16,Retailia,retail,Lyon,Développeur React,React|JavaScript|HTML/CSS|Tests automatisés|Angular
+2026-11-12,Aeronov,aéronautique,Paris,Machine Learning Engineer,SQL|Pandas|Scikit-learn|PyTorch|NLP
+2026-11-06,BanqueSud,banque,Toulouse,Développeur C# .NET,REST API|C#|.NET|Tests automatisés|Azure
+2026-11-10,BanqueSud,banque,Toulouse,Développeur .NET,SQL Server|.NET|C#|Docker|Angular
+2026-10-29,BanqueSud,banque,Toulouse,Ingénieur IA,Python|FastAPI|LLM|Hugging Face|Prompt Engineering
+2026-10-25,AssurOuest,assurance,Bordeaux,Ingénieur Java Spring,REST API|SQL|Java|Git|PostgreSQL
+2026-10-10,MedAlpha,santé,Toulouse,DevOps Cloud,Kubernetes|CI/CD|Docker|GCP|AWS
+2026-11-04,BanqueSud,banque,Paris,Ingénieur QA,Tests automatisés|Selenium|Agile Scrum|Python|Java
+2026-10-30,Retailia,retail,Paris,Développeur C# .NET,REST API|SQL Server|C#|Microservices|Angular
+2026-11-10,Novasys Industrie,industrie,Lyon,Data Engineer Cloud,SQL|Spark|dbt|Databricks|AWS
+2026-10-17,Garonne Énergie,énergie,Paris,Data Scientist NLP,Scikit-learn|Machine Learning|Python|PyTorch|MLOps
+2026-11-11,Aeronov,aéronautique,Paris,Ingénieur Data,dbt|Python|SQL|PostgreSQL|Databricks
+2026-11-08,MedAlpha,santé,Toulouse,Ingénieur Data,SQL|Airflow|Python|Kafka|Snowflake
+2026-10-21,AgriData Sud,agroalimentaire,Toulouse,Développeur Back-end Java,REST API|Java|Microservices|Angular|PostgreSQL
+2026-10-28,Aeronov,aéronautique,Bordeaux,Machine Learning Engineer,Scikit-learn|Pandas|Machine Learning|Deep Learning|NLP
+2026-11-17,CityMobility,mobilité,Toulouse,Machine Learning Engineer,Python|SQL|Scikit-learn|Deep Learning|Spark
+2026-11-06,Capitole Finance,banque,Paris,Développeur .NET,REST API|SQL Server|.NET|Git|Microservices
+2026-10-21,AssurOuest,assurance,Toulouse,Ingénieur IA,Python|LLM|FastAPI|NLP|Hugging Face
+2026-11-07,Occitel,télécoms,Toulouse,Ingénieur SRE,Docker|CI/CD|Linux|Python|Prometheus
+2026-11-11,Garonne Énergie,énergie,Toulouse,Ingénieur Automatisation & IA,Power Automate|Python|REST API|Salesforce|SQL
+2026-09-27,LogiRail,transport,Toulouse,Ingénieur IA générative,Python|LangChain|FastAPI|Hugging Face|Vector Databases
+2026-10-14,BanqueSud,banque,Nantes,DevOps Cloud,Docker|Linux|Kubernetes|GCP|Bash
+2026-11-04,LogiRail,transport,Toulouse,Ingénieur IA générative,FastAPI|LangChain|Python|Vector Databases|Docker
+2026-10-13,AssurOuest,assurance,Toulouse,Développeur React,JavaScript|TypeScript|React|GraphQL|Vue.js
+2026-11-03,Aeronov,aéronautique,Bordeaux,Développeur Low-code,Power Automate|Microsoft 365|n8n|LLM|Salesforce
+2026-11-14,MedAlpha,santé,Toulouse,Product Owner,Gestion de projet|Agile Scrum|Microsoft 365|SQL
+2026-10-13,MedAlpha,santé,Lyon,Développeur React,HTML/CSS|JavaScript|TypeScript|GraphQL|Tests automatisés
+2026-09-29,Pyrénées Santé,santé,Toulouse,Data Engineer Cloud,SQL|Python|Spark|Databricks|AWS
+2026-10-15,MedAlpha,santé,Toulouse,Ingénieur Data,SQL|Python|dbt|Snowflake|Kafka
+2026-10-06,Novasys Industrie,industrie,Toulouse,Data Scientist NLP,Pandas|SQL|Scikit-learn|PyTorch|Computer Vision
+2026-10-13,Capitole Finance,banque,Lyon,Ingénieur Java Spring,SQL|REST API|Spring Boot|Docker|Kubernetes
+2026-11-15,AssurOuest,assurance,Bordeaux,Ingénieur IA générative,Python|LLM|RAG|NLP|Vector Databases
+2026-11-06,Garonne Énergie,énergie,Toulouse,Développeur Front-end,HTML/CSS|React|JavaScript|GraphQL|Node.js
+2026-10-10,Pyrénées Santé,santé,Lyon,Machine Learning Engineer,Python|Machine Learning|Pandas|Spark|Deep Learning
+2026-10-10,AssurOuest,assurance,Toulouse,Ingénieur IA générative,RAG|LangChain|LLM|Vector Databases|Hugging Face
+2026-09-29,Retailia,retail,Paris,Développeur C# .NET,C#|REST API|.NET|Git|Tests automatisés
+2026-10-08,BanqueSud,banque,Toulouse,Data Engineer Cloud,Airflow|Spark|dbt|Docker|PostgreSQL
+2026-10-10,Occitel,télécoms,Toulouse,AI Engineer,FastAPI|LLM|Python|NLP|Azure
+2026-10-08,Aeronov,aéronautique,Toulouse,Data Engineer,dbt|Airflow|SQL|Kafka|PostgreSQL
+2026-10-14,Retailia,retail,Paris,Développeur React,TypeScript|HTML/CSS|JavaScript|GraphQL|Git
+2026-10-09,Garonne Énergie,énergie,Toulouse,AI Engineer,LLM|FastAPI|LangChain|LangGraph|Hugging Face
+2026-10-05,Pyrénées Santé,santé,Toulouse,Ingénieur SRE,Kubernetes|Terraform|CI/CD|AWS|Azure
+2026-09-26,Pyrénées Santé,santé,Toulouse,Ingénieur IA,RAG|FastAPI|LLM|Azure|Docker
+2026-10-21,AgriData Sud,agroalimentaire,Toulouse,Data Engineer Cloud,Spark|Python|SQL|BigQuery|AWS
+2026-10-27,AssurOuest,assurance,Toulouse,Ingénieur Java Spring,Java|Spring Boot|Microservices|Docker|Kubernetes
+2026-10-22,Capitole Finance,banque,Montpellier,Ingénieur Data,SQL|Python|Spark|Docker|Databricks
+2026-10-11,LogiRail,transport,Toulouse,Data Engineer,Airflow|SQL|Python|AWS|BigQuery
+2026-11-12,AgriData Sud,agroalimentaire,Toulouse,Ingénieur .NET Azure,REST API|.NET|SQL Server|Microservices|Tests automatisés
+2026-11-08,Aeronov,aéronautique,Paris,Ingénieur DevOps,Terraform|Kubernetes|Docker|Python|AWS
+2026-11-06,Novasys Industrie,industrie,Paris,Développeur Front-end,React|JavaScript|HTML/CSS|Tests automatisés|Git
+2026-11-16,Garonne Énergie,énergie,Paris,Ingénieur Automatisation & IA,Power Automate|REST API|Microsoft 365|SQL|Azure
+2026-10-08,Novasys Industrie,industrie,Montpellier,Product Owner,Agile Scrum|Gestion de projet|Power BI|Salesforce
+2026-11-19,CityMobility,mobilité,Paris,Data Scientist,Machine Learning|SQL|Scikit-learn|PyTorch|Spark
+2026-10-28,Pyrénées Santé,santé,Toulouse,Développeur Front-end,JavaScript|TypeScript|React|Git|GraphQL
+2026-10-09,Capitole Finance,banque,Toulouse,Data Engineer,Python|Spark|Airflow|Snowflake|Kafka
+2026-10-16,CityMobility,mobilité,Toulouse,Machine Learning Engineer,Machine Learning|SQL|Scikit-learn|Computer Vision|PyTorch
+2026-11-14,Garonne Énergie,énergie,Toulouse,Développeur Front-end,TypeScript|HTML/CSS|JavaScript|Git|GraphQL
+2026-10-01,MedAlpha,santé,Montpellier,Ingénieur Data,Spark|SQL|dbt|PostgreSQL|AWS
+2026-10-06,Occitel,télécoms,Toulouse,Développeur Java,Java|SQL|Microservices|Hibernate|PostgreSQL
+2026-11-20,BanqueSud,banque,Lyon,Développeur Front-end,HTML/CSS|JavaScript|React|Git|Node.js
+2026-11-04,LogiRail,transport,Bordeaux,Développeur Front-end,React|TypeScript|HTML/CSS|Node.js|GraphQL
+2026-09-27,Pyrénées Santé,santé,Bordeaux,Ingénieur IA,RAG|LangChain|FastAPI|LangGraph|NLP
+2026-11-20,AgriData Sud,agroalimentaire,Toulouse,Développeur Low-code,n8n|Power Automate|Microsoft 365|Salesforce|SQL
+2026-11-15,Novasys Industrie,industrie,Toulouse,AI Engineer,LLM|Python|FastAPI|Hugging Face|NLP
+2026-10-07,Pyrénées Santé,santé,Montpellier,Consultant Automatisation,REST API|n8n|Python|Zapier|Make
+2026-11-14,Retailia,retail,Bordeaux,Ingénieur IA générative,LangChain|FastAPI|Python|Azure|Hugging Face
+2026-11-19,Capitole Finance,banque,Toulouse,Consultant Automatisation,n8n|REST API|Microsoft 365|Make|Salesforce
+2026-11-04,Aeronov,aéronautique,Lyon,Développeur Web Front,TypeScript|React|HTML/CSS|Git|GraphQL
+2026-11-14,CityMobility,mobilité,Paris,Développeur Java,Spring Boot|SQL|Microservices|Hibernate|Git
+2026-09-28,Retailia,retail,Bordeaux,DevOps Cloud,Docker|Linux|Terraform|Azure|Bash
+2026-09-26,Pyrénées Santé,santé,Toulouse,Data Scientist,Pandas|Scikit-learn|Python|Deep Learning|Computer Vision
+2026-10-16,AssurOuest,assurance,Toulouse,Développeur React,TypeScript|JavaScript|HTML/CSS|Tests automatisés|Git
+2026-10-23,LogiRail,transport,Paris,Ingénieur IA,Python|FastAPI|LLM|Hugging Face|LangGraph
+2026-09-29,Retailia,retail,Paris,Ingénieur Data,Spark|Airflow|dbt|AWS|BigQuery
+2026-10-30,Aeronov,aéronautique,Paris,Ingénieur IA générative,LLM|LangChain|FastAPI|Azure|NLP
+2026-10-09,LogiRail,transport,Toulouse,Ingénieur IA générative,Python|FastAPI|RAG|Vector Databases|LangGraph
+2026-09-30,SkyPort Services,aéronautique,Toulouse,Ingénieur IA générative,RAG|Python|LangChain|Vector Databases|Hugging Face
+2026-10-04,BanqueSud,banque,Montpellier,Développeur React,React|HTML/CSS|JavaScript|Vue.js|Node.js
+2026-11-07,Pyrénées Santé,santé,Toulouse,Ingénieur Java Spring,Spring Boot|REST API|Java|Git|PostgreSQL
+2026-09-28,BanqueSud,banque,Paris,Développeur Front-end,HTML/CSS|TypeScript|JavaScript|Tests automatisés|Node.js
+2026-10-16,Capitole Finance,banque,Lyon,Ingénieur QA,Agile Scrum|Tests automatisés|Selenium|Git|Python
+2026-11-14,Retailia,retail,Montpellier,Ingénieur IA générative,FastAPI|RAG|LangChain|Hugging Face|NLP
+2026-10-03,AssurOuest,assurance,Toulouse,Machine Learning Engineer,Scikit-learn|SQL|Machine Learning|NLP|Computer Vision
+2026-10-04,Capitole Finance,banque,Paris,Développeur Java,Microservices|REST API|SQL|Hibernate|Angular
+2026-11-07,Garonne Énergie,énergie,Paris,Ingénieur .NET Azure,SQL Server|REST API|C#|Tests automatisés|Angular
+2026-10-11,BanqueSud,banque,Lyon,Ingénieur IA générative,RAG|LangChain|FastAPI|Azure|Prompt Engineering
+2026-10-04,SkyPort Services,aéronautique,Toulouse,Consultant Automatisation,Power Automate|REST API|Python|SQL|Make
+2026-11-17,MedAlpha,santé,Toulouse,Développeur Front-end,React|JavaScript|TypeScript|GraphQL|Angular
+2026-10-07,MedAlpha,santé,Toulouse,Ingénieur SRE,Linux|Docker|Kubernetes|GCP|Prometheus
+2026-10-04,MedAlpha,santé,Nantes,Développeur C# .NET,REST API|C#|.NET|Tests automatisés|Azure
+2026-10-25,AgriData Sud,agroalimentaire,Toulouse,Product Owner,Agile Scrum|Gestion de projet|SAP|SQL
+2026-09-28,AgriData Sud,agroalimentaire,Toulouse,Machine Learning Engineer,Scikit-learn|Machine Learning|SQL|NLP|Deep Learning
+2026-11-16,Occitel,télécoms,Toulouse,Data Scientist NLP,SQL|Python|Machine Learning|PyTorch|MLOps
+2026-11-12,Capitole Finance,banque,Toulouse,Data Scientist NLP,Scikit-learn|Python|Machine Learning|MLOps|NLP
+2026-10-13,AgriData Sud,agroalimentaire,Paris,Data Engineer,Spark|Airflow|SQL|PostgreSQL|AWS
+2026-10-01,SkyPort Services,aéronautique,Toulouse,Développeur Web Front,TypeScript|JavaScript|React|Git|Vue.js
+2026-10-26,MedAlpha,santé,Toulouse,Data Engineer Cloud,SQL|Airflow|Spark|Docker|PostgreSQL
+2026-10-18,SkyPort Services,aéronautique,Toulouse,Ingénieur Java Spring,Java|Microservices|REST API|Kubernetes|PostgreSQL
+2026-10-12,MedAlpha,santé,Toulouse,QA Engineer,Selenium|Tests automatisés|Agile Scrum|Java|JavaScript
+2026-11-02,SkyPort Services,aéronautique,Nantes,Data Engineer,Airflow|dbt|SQL|Snowflake|Docker
+2026-10-31,BanqueSud,banque,Paris,Développeur Java,Spring Boot|Java|REST API|Kafka|Docker
+2026-09-26,Capitole Finance,banque,Lyon,Développeur Front-end,JavaScript|HTML/CSS|TypeScript|GraphQL|Node.js
+2026-11-19,Novasys Industrie,industrie,Bordeaux,Ingénieur Java Spring,Java|Microservices|SQL|Kafka|Docker
+2026-11-16,MedAlpha,santé,Toulouse,Développeur .NET,SQL Server|.NET|REST API|Microservices|Tests automatisés
+2026-10-27,SkyPort Services,aéronautique,Toulouse,Développeur Front-end,JavaScript|React|HTML/CSS|GraphQL|Git
+2026-10-29,BanqueSud,banque,Toulouse,QA Engineer,Tests automatisés|Agile Scrum|Selenium|CI/CD|JavaScript
+2026-11-19,SkyPort Services,aéronautique,Toulouse,Ingénieur Java Spring,Spring Boot|Microservices|REST API|PostgreSQL|Angular
+2026-11-11,Pyrénées Santé,santé,Toulouse,Ingénieur IA,RAG|Python|FastAPI|NLP|Azure
+2026-11-20,AssurOuest,assurance,Toulouse,Ingénieur .NET Azure,C#|.NET|REST API|Tests automatisés|Docker
+2026-09-27,Occitel,télécoms,Toulouse,Développeur Java,Spring Boot|Microservices|REST API|Git|Kubernetes
+2026-10-09,Capitole Finance,banque,Toulouse,Ingénieur DevOps,Docker|CI/CD|Terraform|Bash|AWS
+2026-11-04,CityMobility,mobilité,Paris,Data Engineer,Spark|dbt|SQL|Docker|BigQuery
+2026-11-14,BanqueSud,banque,Paris,AI Engineer,LLM|RAG|FastAPI|Hugging Face|Docker
+2026-10-07,Retailia,retail,Toulouse,Développeur .NET,SQL Server|.NET|REST API|Angular|Azure
+2026-10-06,AssurOuest,assurance,Toulouse,DevOps Cloud,Terraform|Linux|Docker|Python|GCP
+2026-10-22,Pyrénées Santé,santé,Paris,Développeur Java,REST API|SQL|Microservices|Kafka|Docker
+2026-09-28,Capitole Finance,banque,Toulouse,Ingénieur IA,LLM|FastAPI|LangChain|Prompt Engineering|NLP
+2026-11-19,AgriData Sud,agroalimentaire,Paris,Développeur Low-code,Python|REST API|Power Automate|Zapier|Make
+2026-10-17,Pyrénées Santé,santé,Lyon,Développeur Back-end Java,Spring Boot|REST API|Microservices|Docker|Angular
+2026-11-12,SkyPort Services,aéronautique,Paris,Ingénieur Java Spring,Java|SQL|Spring Boot|Angular|Kafka
+2026-10-08,SkyPort Services,aéronautique,Montpellier,Machine Learning Engineer,Machine Learning|Pandas|Python|NLP|Spark
+2026-09-26,CityMobility,mobilité,Lyon,Chef de projet IT,Agile Scrum|Gestion de projet|SAP|Power BI
+2026-11-16,MedAlpha,santé,Toulouse,AI Engineer,Python|LLM|RAG|NLP|Docker
+2026-11-18,AgriData Sud,agroalimentaire,Bordeaux,Data Engineer Cloud,Airflow|Python|Spark|AWS|Databricks
+2026-11-04,Retailia,retail,Paris,Développeur .NET,.NET|REST API|SQL Server|Docker|Git
+2026-10-18,MedAlpha,santé,Bordeaux,Machine Learning Engineer,SQL|Pandas|Machine Learning|Deep Learning|MLOps
+2026-11-20,Occitel,télécoms,Paris,Développeur Java,SQL|Spring Boot|Java|Kafka|Angular
+2026-11-11,Novasys Industrie,industrie,Bordeaux,Machine Learning Engineer,SQL|Python|Scikit-learn|NLP|MLOps
+2026-11-13,LogiRail,transport,Bordeaux,Développeur Java,SQL|Spring Boot|REST API|Docker|Hibernate
+2026-11-05,Retailia,retail,Toulouse,Data Engineer Cloud,Spark|SQL|Python|Databricks|AWS
+2026-11-11,Garonne Énergie,énergie,Toulouse,Data Engineer Cloud,SQL|dbt|Airflow|AWS|Databricks
+2026-10-05,Garonne Énergie,énergie,Nantes,Développeur Front-end,JavaScript|HTML/CSS|TypeScript|Git|Tests automatisés
+2026-11-06,Retailia,retail,Toulouse,Développeur Low-code,n8n|Microsoft 365|Power Automate|Azure|SQL
+2026-10-08,LogiRail,transport,Toulouse,Ingénieur IA,FastAPI|Python|LangChain|Hugging Face|NLP
+2026-11-08,SkyPort Services,aéronautique,Toulouse,Ingénieur Java Spring,SQL|Spring Boot|REST API|Kafka|Docker
+2026-10-13,Pyrénées Santé,santé,Toulouse,Data Engineer Cloud,Spark|Python|dbt|Kafka|Databricks
+2026-10-17,Pyrénées Santé,santé,Lyon,DevOps Cloud,CI/CD|Linux|Kubernetes|GCP|AWS
+2026-11-06,LogiRail,transport,Toulouse,Ingénieur QA,Tests automatisés|Agile Scrum|Selenium|JavaScript|Python
+2026-09-27,Retailia,retail,Lyon,Data Engineer,Spark|dbt|SQL|BigQuery|Snowflake
+2026-10-15,SkyPort Services,aéronautique,Bordeaux,Développeur Back-end Java,Java|SQL|REST API|Docker|Hibernate
+2026-10-28,AssurOuest,assurance,Toulouse,Ingénieur Data,Spark|Airflow|SQL|PostgreSQL|AWS
+2026-10-12,AgriData Sud,agroalimentaire,Toulouse,AI Engineer,LangChain|LLM|FastAPI|Azure|NLP
+2026-10-16,Garonne Énergie,énergie,Lyon,Ingénieur .NET Azure,SQL Server|REST API|.NET|Tests automatisés|Microservices
+2026-11-13,LogiRail,transport,Bordeaux,Ingénieur SRE,Kubernetes|Docker|CI/CD|Bash|Prometheus
+2026-10-12,CityMobility,mobilité,Bordeaux,Développeur Front-end,JavaScript|HTML/CSS|TypeScript|GraphQL|Node.js
+2026-10-21,AssurOuest,assurance,Toulouse,Ingénieur QA,Selenium|Agile Scrum|Tests automatisés|Python|CI/CD
+2026-10-05,AssurOuest,assurance,Montpellier,Développeur Java,Microservices|REST API|SQL|Angular|Kafka
+2026-10-11,Aeronov,aéronautique,Paris,Ingénieur Java Spring,Spring Boot|REST API|Java|Kafka|Angular
+2026-11-06,AgriData Sud,agroalimentaire,Montpellier,Développeur .NET,C#|.NET|REST API|Tests automatisés|Azure
+2026-11-03,Novasys Industrie,industrie,Toulouse,Ingénieur SRE,CI/CD|Linux|Terraform|Azure|Bash
+2026-11-16,SkyPort Services,aéronautique,Paris,Ingénieur QA,Tests automatisés|Agile Scrum|Selenium|CI/CD|Python
+2026-10-22,Retailia,retail,Paris,QA Engineer,Selenium|Tests automatisés|Agile Scrum|JavaScript|Java
+2026-11-02,BanqueSud,banque,Toulouse,AI Engineer,FastAPI|RAG|LangChain|NLP|Azure
+2026-10-27,Pyrénées Santé,santé,Nantes,Développeur .NET,.NET|REST API|SQL Server|Tests automatisés|Microservices
+2026-10-21,BanqueSud,banque,Bordeaux,Ingénieur Data,dbt|SQL|Airflow|Databricks|BigQuery
+2026-10-29,Aeronov,aéronautique,Paris,Développeur Back-end Java,REST API|Spring Boot|SQL|Kafka|PostgreSQL
+2026-11-16,Occitel,télécoms,Toulouse,Ingénieur .NET Azure,REST API|.NET|SQL Server|Angular|Git
+2026-10-08,MedAlpha,santé,Toulouse,Ingénieur QA,Tests automatisés|Selenium|Agile Scrum|Python|CI/CD
+2026-09-28,Retailia,retail,Paris,Machine Learning Engineer,Scikit-learn|Machine Learning|Python|PyTorch|Computer Vision
+2026-10-20,Pyrénées Santé,santé,Toulouse,Ingénieur .NET Azure,C#|.NET|SQL Server|Git|Docker
+2026-09-26,Occitel,télécoms,Toulouse,Ingénieur IA générative,FastAPI|RAG|LLM|Vector Databases|Azure
+2026-09-30,SkyPort Services,aéronautique,Bordeaux,Développeur Back-end Java,Java|REST API|Spring Boot|Git|Hibernate
+2026-11-13,LogiRail,transport,Toulouse,Développeur Front-end,React|HTML/CSS|JavaScript|Node.js|Vue.js
+2026-10-31,Capitole Finance,banque,Toulouse,Ingénieur IA générative,RAG|LLM|FastAPI|Docker|Vector Databases
+2026-10-30,LogiRail,transport,Toulouse,AI Engineer,LangChain|LLM|FastAPI|Prompt Engineering|Docker
+2026-11-03,Retailia,retail,Bordeaux,Ingénieur Java Spring,Spring Boot|Microservices|Java|Hibernate|Kubernetes
+2026-10-24,MedAlpha,santé,Toulouse,Consultant Automatisation,n8n|Microsoft 365|REST API|Make|Zapier
+2026-09-27,SkyPort Services,aéronautique,Bordeaux,Développeur .NET,SQL Server|.NET|REST API|Docker|Git
+2026-10-26,Occitel,télécoms,Toulouse,Data Engineer Cloud,Python|SQL|dbt|Kafka|Databricks
+2026-10-30,Novasys Industrie,industrie,Toulouse,Ingénieur IA générative,FastAPI|RAG|LLM|LangGraph|Hugging Face
+2026-10-13,Retailia,retail,Paris,Data Scientist NLP,SQL|Machine Learning|Pandas|Deep Learning|Computer Vision
+2026-10-02,BanqueSud,banque,Nantes,Ingénieur SRE,CI/CD|Terraform|Kubernetes|Python|Azure
+2026-09-30,AssurOuest,assurance,Toulouse,Testeur automaticien,Agile Scrum|Tests automatisés|Selenium|Java|Python
+2026-10-31,CityMobility,mobilité,Bordeaux,Développeur React,React|HTML/CSS|TypeScript|Angular|Tests automatisés
+2026-10-04,LogiRail,transport,Lyon,Ingénieur .NET Azure,REST API|C#|SQL Server|Azure|Angular

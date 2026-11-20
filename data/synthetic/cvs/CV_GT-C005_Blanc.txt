@@ -1,0 +1,30 @@
+Camille Blanc
+Ingénieur QA
+Email : camille.blanc@mail-perso.fr | Tél : 06 89 78 13 60
+76 allée Jean Jaurès, 31000 Toulouse
+
+Localisation : Toulouse | Mobilité : Toulouse, France
+Disponibilité : 19/01/2027
+TJM : 480 €
+Années d'expérience : 6 ans
+
+PROFIL
+Ingénieur QA avec 6 ans d'expérience, intervenu(e) dans les secteurs transport, télécoms.
+
+COMPÉTENCES
+Tests automatisés, Agile Scrum, Selenium, Git, Python, JavaScript, CI/CD
+
+EXPÉRIENCES PROFESSIONNELLES
+Ingénieur QA — Occitel (Toulouse)
+07/2023 – Présent
+Automatisation des tests de non-régression. Environnement : Selenium, Git, CI/CD.
+
+Testeur automaticien — LogiRail (Toulouse)
+09/2020 – 06/2023
+Automatisation des tests de non-régression. Environnement : Selenium, Git, CI/CD, JavaScript.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2019)
+
+LANGUES
+Français (natif)

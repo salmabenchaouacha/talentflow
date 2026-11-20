@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e ".[all]"
+      - name: Lint
+        run: ruff check src tests dashboard
+      - name: Tests
+        run: pytest -q --cov=talentflow --cov-report=term-missing
+      - name: Démo hors-ligne de bout en bout
+        run: python -m talentflow.cli demo
+      - name: Garde-fous qualité (précision, fuites de données personnelles)
+        run: python -m talentflow.cli eval --min-precision 0.6
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rapport-evaluation
+          path: reports/
+
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: talentflow
+          POSTGRES_PASSWORD: talentflow
+          POSTGRES_DB: talentflow
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U talentflow" --health-interval 5s --health-retries 10
+    env:
+      TF_DATABASE_URL: postgresql://talentflow:talentflow@localhost:5432/talentflow
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[all]" dbt-postgres==1.8.*
+      - name: Démo sur PostgreSQL + PGVector
+        run: python -m talentflow.cli demo
+      - name: Modèles et tests dbt
+        working-directory: dbt
+        env: { PGHOST: localhost }
+        run: dbt run --profiles-dir . && dbt test --profiles-dir .

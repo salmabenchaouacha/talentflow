@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: talentflow
+    schema: public
+    description: Tables opérationnelles écrites par l'API TalentFlow (données pseudonymisées).
+    tables:
+      - name: documents
+      - name: candidates
+      - name: needs
+      - name: matches
+      - name: prospection_emails
+      - name: pipeline_runs

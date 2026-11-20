@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+data/talentflow.db
+data/inbox/**/*
+!data/inbox/**/.gitkeep
+outputs/
+reports/
+models/*.gguf
+dbt/target/
+dbt/logs/

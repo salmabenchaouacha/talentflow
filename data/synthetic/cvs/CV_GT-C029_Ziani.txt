@@ -1,0 +1,38 @@
+Thomas Ziani
+Ingénieur Data
+Email : thomas.ziani@mail-perso.fr | Tél : 06 30 32 62 13
+23 rue du Taur, 31000 Toulouse
+
+Localisation : Toulouse | Mobilité : Toulouse
+Disponibilité : 19/05/2027
+TJM : 690 €
+Années d'expérience : 13 ans
+
+PROFIL
+Ingénieur Data avec 13 ans d'expérience, intervenu(e) dans les secteurs agroalimentaire, santé.
+
+COMPÉTENCES
+Airflow, SQL, dbt, Python, Spark, Docker, Snowflake, PostgreSQL, Java
+
+EXPÉRIENCES PROFESSIONNELLES
+Ingénieur Data — MedAlpha (Toulouse)
+05/2017 – Présent
+Modélisation des données et industrialisation des transformations. Environnement : dbt, SQL, Python, Airflow.
+
+Data Engineer — MedAlpha (Toulouse)
+02/2016 – 04/2017
+Conception de pipelines d'ingestion batch et streaming. Environnement : Docker, Spark, Snowflake, SQL.
+
+Ingénieur Data — MedAlpha (Toulouse)
+04/2014 – 01/2016
+Modélisation des données et industrialisation des transformations. Environnement : Docker, Spark, Snowflake, Airflow.
+
+Data Engineer — AgriData Sud (Toulouse)
+04/2013 – 03/2014
+Migration d'un entrepôt de données vers le cloud. Environnement : Snowflake, Docker, Airflow, Java, dbt.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2012)
+
+LANGUES
+Français (natif)

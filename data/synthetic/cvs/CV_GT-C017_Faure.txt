@@ -1,0 +1,31 @@
+Pauline Faure
+Développeur Java
+Email : pauline.faure@mail-perso.fr | Tél : 06 86 78 12 90
+66 allée Jean Jaurès, 33000 Bordeaux
+Né(e) le 05/05/1997 — Nationalité : française
+
+Localisation : Bordeaux | Mobilité : Bordeaux
+Disponibilité : 19/04/2027
+TJM : 350 €
+Années d'expérience : 3 ans
+
+PROFIL
+Développeur Java avec 3 ans d'expérience, intervenu(e) dans les secteurs assurance, aéronautique.
+
+COMPÉTENCES
+Microservices, REST API, Java, Spring Boot, Angular, Kafka
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur Java — AssurOuest (Bordeaux)
+03/2025 – Présent
+Développement d'API de gestion de contrats. Environnement : Kafka, Microservices, Java.
+
+Développeur Java — SkyPort Services (Bordeaux)
+12/2023 – 02/2025
+Plateforme de paiement à fort trafic. Environnement : Angular, Kafka, Microservices, REST API, Java.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2022)
+
+LANGUES
+Français (natif), Anglais (professionnel)

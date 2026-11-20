@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_matches
+    columns:
+      - name: match_id
+        tests: [unique, not_null]
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['pending_review', 'validated', 'rejected', 'sent']
+      - name: final_score
+        tests: [not_null]
+  - name: stg_needs
+    columns:
+      - name: need_id
+        tests: [unique, not_null]
+  - name: stg_candidates
+    columns:
+      - name: candidate_id
+        tests: [unique, not_null]
+      - name: retention_until
+        description: Date limite de conservation (RGPD) ; purgée chaque semaine par Airflow.
+        tests: [not_null]
+  - name: fct_matches
+    columns:
+      - name: match_id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_matches')
+              field: match_id
+  - name: fct_weekly_kpis
+    description: Une ligne par semaine ; source du tableau de bord hebdomadaire.
+    columns:
+      - name: week_start
+        tests: [unique, not_null]
+  - name: fct_skill_demand_vs_pool
+    columns:
+      - name: skill
+        tests: [unique, not_null]

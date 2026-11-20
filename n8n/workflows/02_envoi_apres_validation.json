@@ -1,0 +1,202 @@
+{
+  "name": "TalentFlow 02 · Proposition validée → envoi du dossier → positionnement Boond",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "talentflow-validation",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "4455ff35-cca1-5ad7-b747-fa92f6f3ecc3",
+      "name": "Webhook proposition validée",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "c2c5fa54-8e90-5f96-9e60-173be99745c8"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.TF_API_BASE_URL }}/matches/{{ $json.body.match_id }}/dossier",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "dossier"
+            }
+          }
+        }
+      },
+      "id": "2abcfd7b-6df7-5950-b05a-5f3c0f5bd868",
+      "name": "Télécharger le dossier Word",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ $env.TF_MAIL_FROM }}",
+        "toEmail": "={{ $env.TF_CLIENT_DEMO_EMAIL }}",
+        "subject": "=Proposition de profil – {{ $('Webhook proposition validée').item.json.body.need_title }}",
+        "emailFormat": "html",
+        "html": "=<p>Bonjour,</p><p>Suite à votre besoin « {{ $('Webhook proposition validée').item.json.body.need_title }} », veuillez trouver ci-joint le dossier de compétences d'un consultant disponible.</p><p>Je reste à votre disposition pour organiser un échange.</p><p>{{ $('Webhook proposition validée').item.json.body.reviewer }}</p>",
+        "options": {
+          "attachments": "dossier"
+        }
+      },
+      "id": "d2c2a382-2fae-5b5b-84dd-79761a84472d",
+      "name": "Envoyer le dossier au client",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        300
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "REPLACE_SMTP_ID",
+          "name": "SMTP TalentFlow (Mailpit en démo)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.TF_API_BASE_URL }}/mock/boond/positionings",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({data: {relationships: {opportunity: {data: {id: $('Webhook proposition validée').item.json.body.need_id, type: 'opportunity'}}, dependsOn: {data: {id: $('Webhook proposition validée').item.json.body.candidate_id, type: 'resource'}}}}}) }}"
+      },
+      "id": "c6f2d709-4ca5-5208-9e06-9742896105d1",
+      "name": "Positionner dans Boond",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.TF_API_BASE_URL }}/matches/{{ $('Webhook proposition validée').item.json.body.match_id }}/sent",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {},
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "actor",
+              "value": "n8n"
+            }
+          ]
+        }
+      },
+      "id": "61194afa-7016-523c-a8e5-a2f912e78e16",
+      "name": "Marquer comme envoyé",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook proposition validée": {
+      "main": [
+        [
+          {
+            "node": "Télécharger le dossier Word",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Télécharger le dossier Word": {
+      "main": [
+        [
+          {
+            "node": "Envoyer le dossier au client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Envoyer le dossier au client": {
+      "main": [
+        [
+          {
+            "node": "Positionner dans Boond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Positionner dans Boond": {
+      "main": [
+        [
+          {
+            "node": "Marquer comme envoyé",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Paris"
+  },
+  "tags": [
+    {
+      "name": "talentflow"
+    },
+    {
+      "name": "human-in-the-loop"
+    }
+  ],
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

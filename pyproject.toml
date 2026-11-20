@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "talentflow"
+version = "1.0.0"
+description = "Chaîne automatisée de staffing par IA pour ESN : besoin client → profils validés → dossier de compétences."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Salma Ben Chaouacha" }]
+dependencies = [
+  "pydantic>=2.6",
+  "numpy>=1.26",
+  "scikit-learn>=1.4",
+  "python-docx>=1.1",
+  "pypdf>=4.0",
+  "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.29", "python-multipart>=0.0.9"]
+postgres = ["psycopg[binary]>=3.1"]
+dashboard = ["streamlit>=1.35", "pandas>=2.1", "requests>=2.31"]
+docling = ["docling>=2.0"]
+presidio = ["presidio-analyzer>=2.2", "spacy>=3.7"]
+local-embeddings = ["sentence-transformers>=2.7"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.4", "httpx>=0.27"]
+all = ["talentflow[api,postgres,dashboard,dev]"]
+
+[project.scripts]
+talentflow = "talentflow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/talentflow/generation/prospection.py" = ["E501"]
+"src/talentflow/evaluation/*" = ["E501"]

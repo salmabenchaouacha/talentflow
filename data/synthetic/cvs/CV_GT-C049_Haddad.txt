@@ -1,0 +1,30 @@
+Inès Haddad
+Ingénieur SRE
+Email : ines.haddad@mail-perso.fr | Tél : 06 44 23 26 21
+24 boulevard Carnot, 31000 Toulouse
+
+Localisation : Toulouse | Mobilité : Toulouse, France
+Disponibilité : 19/04/2027
+TJM : 600 €
+Années d'expérience : 8 ans
+
+PROFIL
+Ingénieur SRE avec 8 ans d'expérience, intervenu(e) dans les secteurs aéronautique, banque.
+
+COMPÉTENCES
+CI/CD, Linux, Docker, AWS, GCP
+
+EXPÉRIENCES PROFESSIONNELLES
+Ingénieur SRE — BanqueSud (Toulouse)
+09/2025 – Présent
+Migration vers Kubernetes. Environnement : GCP, CI/CD, Docker, Linux.
+
+Ingénieur SRE — Aeronov (Toulouse)
+12/2018 – 08/2025
+Infrastructure as code multi-environnements. Environnement : AWS, GCP, CI/CD, Docker.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2017)
+
+LANGUES
+Français (natif), Anglais (professionnel)

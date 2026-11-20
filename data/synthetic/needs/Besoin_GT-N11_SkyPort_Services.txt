@@ -1,0 +1,15 @@
+FICHE DE BESOIN — RÉF GT-N11
+Client : SkyPort Services (secteur aéronautique)
+Intitulé : Ingénieur IA senior
+Contexte : Au sein de la DSI de SkyPort Services, renfort d'une équipe sur un projet de assistant rag sur la documentation interne.
+Compétences obligatoires : RAG, LangChain, FastAPI
+Compétences souhaitées : Prompt Engineering, Docker
+Expérience : 6 ans minimum
+Séniorité : senior
+Lieu : Toulouse
+Télétravail : 2 jours/semaine (hybride)
+Démarrage : 04/12/2026
+Durée : 6 mois
+TJM max : 700 €
+Langues : anglais courant
+Contact client : Camille Blanc — camille@skyportservices.fr — 05 61 30 22 33

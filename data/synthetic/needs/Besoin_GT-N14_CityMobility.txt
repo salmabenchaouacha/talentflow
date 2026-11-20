@@ -1,0 +1,14 @@
+FICHE DE BESOIN — RÉF GT-N14
+Client : CityMobility (secteur mobilité)
+Intitulé : Data Scientist NLP confirmé
+Contexte : Au sein de la DSI de CityMobility, renfort d'une équipe sur un projet de modèles de prévision de la demande.
+Compétences obligatoires : Machine Learning, SQL, Python
+Compétences souhaitées : Spark, MLOps
+Expérience : 3 ans minimum
+Séniorité : confirmé
+Lieu : Toulouse
+Télétravail : 2 jours/semaine (hybride)
+Démarrage : 04/12/2026
+Durée : 3 mois
+TJM max : 520 €
+Contact client : Margaux Rahmani — margaux@citymobility.fr — 05 61 33 22 33

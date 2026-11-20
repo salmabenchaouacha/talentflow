@@ -1,0 +1,27 @@
+Salomé Rahmani
+Développeur Java
+Email : salome.rahmani@mail-perso.fr | Tél : 06 57 31 87 87
+96 rue du Taur, 75011 Paris
+Né(e) le 27/03/2000 — Nationalité : française
+
+Localisation : Paris | Mobilité : Paris, Full remote
+Disponibilité : 05/12/2026
+TJM : 360 €
+Années d'expérience : 1 ans
+
+PROFIL
+Développeur Java avec 1 ans d'expérience, intervenu(e) dans les secteurs énergie.
+
+COMPÉTENCES
+Spring Boot, Java, REST API, SQL, Docker, Git
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur Java — Garonne Énergie (Paris)
+04/2025 – Présent
+Développement d'API de gestion de contrats. Environnement : Git, SQL, Docker, REST API, Spring Boot.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2024)
+
+LANGUES
+Français (natif), Anglais (professionnel)

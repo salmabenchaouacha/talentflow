@@ -1,0 +1,30 @@
+Emma Garcia
+Consultant Automatisation
+Email : emma.garcia@mail-perso.fr | Tél : 06 88 85 40 41
+7 rue du Taur, 31000 Toulouse
+
+Localisation : Toulouse | Mobilité : Toulouse, Full remote
+Disponibilité : immédiate
+TJM : 410 €
+Années d'expérience : 4 ans
+
+PROFIL
+Consultant Automatisation avec 4 ans d'expérience, intervenu(e) dans les secteurs assurance, aéronautique.
+
+COMPÉTENCES
+Python, Power Automate, REST API, Make, LLM, Azure, Salesforce
+
+EXPÉRIENCES PROFESSIONNELLES
+Consultant Automatisation — AssurOuest (Toulouse)
+09/2025 – Présent
+Automatisation des processus RH et achats. Environnement : Azure, Make, Python, Power Automate.
+
+Ingénieur Automatisation & IA — SkyPort Services (Toulouse)
+06/2022 – 08/2025
+Workflows d'approbation et de reporting. Environnement : Make, Azure, Salesforce.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2021)
+
+LANGUES
+Français (natif), Anglais (professionnel)

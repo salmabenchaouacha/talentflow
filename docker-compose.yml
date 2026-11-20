@@ -1,0 +1,105 @@
+# TalentFlow — pile complète.
+#   make up                → postgres+pgvector, API, interface, n8n, Mailpit
+#   make up-batch          → + Airflow (traitements hebdomadaires, dbt) et Metabase
+#   docker compose --profile local-llm up  → + serveur llama.cpp (LLM local)
+x-tf-env: &tf-env
+  env_file: .env
+  environment:
+    TF_DATABASE_URL: postgresql://talentflow:talentflow@postgres:5432/talentflow
+    TF_API_BASE_URL: http://api:8000
+    TF_N8N_VALIDATION_WEBHOOK_URL: http://n8n:5678/webhook/talentflow-validation
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: talentflow
+      POSTGRES_PASSWORD: talentflow
+      POSTGRES_DB: talentflow
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U talentflow"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build: .
+    <<: *tf-env
+    depends_on:
+      postgres: { condition: service_healthy }
+    ports: ["8000:8000"]
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      retries: 10
+
+  dashboard:
+    build: .
+    <<: *tf-env
+    command: ["streamlit", "run", "dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    depends_on:
+      api: { condition: service_healthy }
+    ports: ["8501:8501"]
+
+  n8n:
+    image: n8nio/n8n:1.70.3
+    env_file: .env
+    environment:
+      N8N_BLOCK_ENV_ACCESS_IN_NODE: "false"
+      TF_API_BASE_URL: http://api:8000
+      GENERIC_TIMEZONE: Europe/Paris
+      N8N_SECURE_COOKIE: "false"
+    ports: ["5678:5678"]
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./n8n/workflows:/workflows:ro
+
+  mailpit:   # boîte mail de démo : http://localhost:8025 (SMTP 1025, sans authentification)
+    image: axllent/mailpit:v1.21
+    ports: ["8025:8025", "1025:1025"]
+
+  # ---------------------------------------------------------------- profil batch
+  airflow:
+    build: { context: ., dockerfile: docker/airflow.Dockerfile }
+    profiles: ["batch"]
+    command: standalone
+    env_file: .env
+    environment:
+      TF_DATABASE_URL: postgresql://talentflow:talentflow@postgres:5432/talentflow
+      TF_DATA_DIR: /opt/talentflow/data
+      TF_OUTPUT_DIR: /opt/talentflow/outputs
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/talentflow/airflow/dags
+      PGHOST: postgres
+      PGUSER: talentflow
+      PGPASSWORD: talentflow
+      PGDATABASE: talentflow
+    depends_on:
+      postgres: { condition: service_healthy }
+    ports: ["8080:8080"]
+    volumes:
+      - ./data:/opt/talentflow/data
+      - ./outputs:/opt/talentflow/outputs
+      - ./reports:/opt/talentflow/reports
+
+  metabase:
+    image: metabase/metabase:v0.51.4
+    profiles: ["batch"]
+    ports: ["3000:3000"]
+    depends_on: [postgres]
+
+  # ------------------------------------------------------------ profil LLM local
+  llamacpp:
+    image: ghcr.io/ggml-org/llama.cpp:server
+    profiles: ["local-llm"]
+    command: ["-m", "/models/model.gguf", "--host", "0.0.0.0", "--port", "8080", "-c", "8192"]
+    volumes: [./models:/models:ro]
+    ports: ["8080:8080"]
+
+volumes:
+  pgdata:
+  n8n_data:

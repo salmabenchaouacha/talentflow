@@ -1,0 +1,39 @@
+Clara Perrin
+Développeur React
+Email : clara.perrin@mail-perso.fr | Tél : 06 78 72 82 48
+61 chemin de la Garonne, 69003 Lyon
+Né(e) le 11/11/1995 — Nationalité : française
+
+Localisation : Lyon | Mobilité : Lyon, Montpellier
+Disponibilité : 19/04/2027
+TJM : 470 €
+Années d'expérience : 8 ans
+
+PROFIL
+Développeur React avec 8 ans d'expérience, intervenu(e) dans les secteurs agroalimentaire, assurance, retail, télécoms.
+
+COMPÉTENCES
+React, JavaScript, HTML/CSS, TypeScript, Node.js, GraphQL
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur React — AgriData Sud (Lyon)
+04/2022 – Présent
+Application web de suivi logistique. Environnement : Node.js, TypeScript, HTML/CSS.
+
+Développeur Front-end — Retailia (Lyon)
+12/2020 – 03/2022
+Application web de suivi logistique. Environnement : GraphQL, React, TypeScript.
+
+Développeur React — Occitel (Lyon)
+11/2019 – 11/2020
+Design system et composants réutilisables. Environnement : JavaScript, React, Node.js, TypeScript, HTML/CSS.
+
+Développeur Web Front — AssurOuest (Lyon)
+12/2018 – 10/2019
+Application web de suivi logistique. Environnement : TypeScript, JavaScript, GraphQL.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2017)
+
+LANGUES
+Français (natif), Anglais (professionnel)

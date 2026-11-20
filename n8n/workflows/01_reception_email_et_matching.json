@@ -1,0 +1,295 @@
+{
+  "name": "TalentFlow 01 · Réception email → ingestion → matching → alerte commercial",
+  "nodes": [
+    {
+      "parameters": {
+        "mailbox": "INBOX",
+        "postProcessAction": "read",
+        "downloadAttachments": true,
+        "options": {
+          "customEmailConfig": "[\"UNSEEN\"]"
+        }
+      },
+      "id": "e900374b-fd9b-5fe7-967d-c8274451cc42",
+      "name": "Boîte mail besoins & CV (IMAP)",
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "credentials": {
+        "imap": {
+          "id": "REPLACE_IMAP_ID",
+          "name": "IMAP boîte besoins"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Une pièce jointe = un document à traiter. On devine CV / besoin à partir de l'objet.\nconst out = [];\nfor (const item of $input.all()) {\n  const subject = (item.json.subject || '').toLowerCase();\n  const kindFromSubject = /(besoin|appel d'offre|\\bao\\b|mission|fiche de poste)/.test(subject) ? 'need'\n                        : /(\\bcv\\b|candidature|profil)/.test(subject) ? 'cv' : '';\n  for (const [key, bin] of Object.entries(item.binary || {})) {\n    if (!/\\.(pdf|docx|txt|md|html?)$/i.test(bin.fileName || '')) continue;\n    out.push({\n      json: { kind: kindFromSubject, filename: bin.fileName, subject: item.json.subject,\n              sender: item.json.from?.value?.[0]?.address || item.json.from || '' },\n      binary: { data: bin },\n    });\n  }\n}\nreturn out;"
+      },
+      "id": "75fa2158-7f74-5db2-9f9c-d253b06d1833",
+      "name": "Une pièce jointe = un item",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.TF_API_BASE_URL }}/documents",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {},
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "source",
+              "value": "n8n-email"
+            },
+            {
+              "name": "sender",
+              "value": "={{ $json.sender }}"
+            },
+            {
+              "name": "kind",
+              "value": "={{ $json.kind }}"
+            }
+          ]
+        }
+      },
+      "id": "08a309e7-05a2-5750-949b-b49b051bdf65",
+      "name": "Ingestion TalentFlow",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "is-need",
+              "leftValue": "={{ $json.kind }}",
+              "rightValue": "need",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "not-dup",
+              "leftValue": "={{ $json.duplicate }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "false",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "04a2c495-9b1c-56a5-a7e9-5e23a93a71a2",
+      "name": "Est-ce un besoin client ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.TF_API_BASE_URL }}/needs/{{ $json.entity_id }}/match",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "48e33154-0768-5379-a7ff-5cda6e95b607",
+      "name": "Matching du besoin",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Résumé HTML envoyé au commercial : profils proposés + lien vers l'écran de validation\nconst r = $json;\nconst rows = (r.proposals || []).map(p => `<tr><td>#${p.rank}</td><td>${p.candidate_id}</td>\n  <td>${Math.round(p.final_score * 100)}</td><td>${p.judge ? p.judge.score : '-'}</td>\n  <td>${p.judge ? p.judge.justification : ''}</td></tr>`).join('');\nreturn [{ json: {\n  subject: `[TalentFlow] ${r.proposals.length} profil(s) pour « ${r.need_title} »`,\n  html: `<p>Nouveau besoin traité automatiquement : <b>${r.need_title}</b>.</p>\n         <p>${r.retrieved} profils analysés, ${r.eligible} éligibles après filtres métier.</p>\n         <table border=\"1\" cellpadding=\"6\" style=\"border-collapse:collapse\">\n         <tr><th>Rang</th><th>Profil</th><th>Score</th><th>Juge IA</th><th>Justification</th></tr>${rows}</table>\n         <p><a href=\"${r.review_url}\">➡️ Valider ou rejeter les profils</a> — rien ne part au client sans votre validation.</p>`\n}}];"
+      },
+      "id": "8c03e2a1-3760-5a58-a223-898552463910",
+      "name": "Préparer le résumé",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ $env.TF_MAIL_FROM }}",
+        "toEmail": "={{ $env.TF_SALES_EMAIL }}",
+        "subject": "={{ $json.subject }}",
+        "emailFormat": "html",
+        "html": "={{ $json.html }}",
+        "options": {}
+      },
+      "id": "c5a0da08-fd1e-53ed-bd2d-f9c77d70cfc9",
+      "name": "Prévenir le commercial",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1440,
+        200
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "REPLACE_SMTP_ID",
+          "name": "SMTP TalentFlow (Mailpit en démo)"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "2fef6c3f-572f-5368-b837-cccb40502218",
+      "name": "CV ajouté au vivier",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        960,
+        420
+      ]
+    }
+  ],
+  "connections": {
+    "Boîte mail besoins & CV (IMAP)": {
+      "main": [
+        [
+          {
+            "node": "Une pièce jointe = un item",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Une pièce jointe = un item": {
+      "main": [
+        [
+          {
+            "node": "Ingestion TalentFlow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ingestion TalentFlow": {
+      "main": [
+        [
+          {
+            "node": "Est-ce un besoin client ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Matching du besoin": {
+      "main": [
+        [
+          {
+            "node": "Préparer le résumé",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Préparer le résumé": {
+      "main": [
+        [
+          {
+            "node": "Prévenir le commercial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Est-ce un besoin client ?": {
+      "main": [
+        [
+          {
+            "node": "Matching du besoin",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CV ajouté au vivier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Paris"
+  },
+  "tags": [
+    {
+      "name": "talentflow"
+    },
+    {
+      "name": "staffing"
+    }
+  ],
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

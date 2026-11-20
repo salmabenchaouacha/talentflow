@@ -1,0 +1,39 @@
+Adam Haddad
+DevOps Cloud
+Email : adam.haddad@mail-perso.fr | Tél : 06 93 45 41 24
+4 rue du Taur, 31000 Toulouse
+Né(e) le 17/07/1996 — Nationalité : française
+
+Localisation : Toulouse | Mobilité : Toulouse, France
+Disponibilité : immédiate
+TJM : 600 €
+Années d'expérience : 7 ans
+
+PROFIL
+DevOps Cloud avec 7 ans d'expérience, intervenu(e) dans les secteurs banque, santé, télécoms, énergie.
+
+COMPÉTENCES
+Linux, Kubernetes, Docker, Prometheus, GCP, Python
+
+EXPÉRIENCES PROFESSIONNELLES
+DevOps Cloud — MedAlpha (Toulouse)
+08/2023 – Présent
+Mise en place de la chaîne CI/CD. Environnement : Docker, Prometheus, Kubernetes, Linux, Python.
+
+Ingénieur SRE — Occitel (Toulouse)
+06/2021 – 07/2023
+Mise en place de la chaîne CI/CD. Environnement : Prometheus, Linux, Docker, Python, Kubernetes.
+
+Ingénieur SRE — Garonne Énergie (Toulouse)
+05/2020 – 05/2021
+Mise en place de la chaîne CI/CD. Environnement : Python, Kubernetes, Docker.
+
+Ingénieur DevOps — BanqueSud (Toulouse)
+05/2019 – 04/2020
+Migration vers Kubernetes. Environnement : Kubernetes, Python, Prometheus.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2018)
+
+LANGUES
+Français (natif), Anglais (professionnel)

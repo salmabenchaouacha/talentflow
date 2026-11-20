@@ -1,0 +1,3203 @@
+{
+  "reference_date": "2026-11-20",
+  "seed": 42,
+  "consultants": {
+    "GT-C001": {
+      "file": "CV_GT-C001_Perrin.md",
+      "archetype": "data_scientist",
+      "title": "Data Scientist",
+      "years": 6.3,
+      "skills": [
+        "Machine Learning",
+        "SQL",
+        "Python",
+        "Spark",
+        "MLOps",
+        "Deep Learning",
+        "NLP"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-20",
+      "rate": 500,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Amira Perrin",
+        "amira.perrin@mail-perso.fr",
+        "06 41 51 58 45",
+        "105 chemin de la Garonne, 31000 Toulouse"
+      ]
+    },
+    "GT-C002": {
+      "file": "CV_GT-C002_Mansouri.docx",
+      "archetype": "ai_engineer",
+      "title": "Ingénieur IA",
+      "years": 11.2,
+      "skills": [
+        "FastAPI",
+        "LangChain",
+        "Python",
+        "LLM",
+        "Hugging Face",
+        "Docker",
+        "Prompt Engineering",
+        "NLP"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2027-02-18",
+      "rate": 740,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Camille Mansouri",
+        "camille.mansouri@mail-perso.fr",
+        "06 50 70 58 59",
+        "85 chemin de la Garonne, 31000 Toulouse"
+      ]
+    },
+    "GT-C003": {
+      "file": "CV_GT-C003_Bonnet.docx",
+      "archetype": "data_engineer",
+      "title": "Data Engineer Cloud",
+      "years": 1.5,
+      "skills": [
+        "SQL",
+        "Python",
+        "Spark",
+        "Airflow",
+        "dbt",
+        "BigQuery",
+        "PostgreSQL"
+      ],
+      "city": "Nantes",
+      "mobility": [
+        "Nantes",
+        "France"
+      ],
+      "availability": "2027-01-04",
+      "rate": 380,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Pauline Bonnet",
+        "pauline.bonnet@mail-perso.fr",
+        "06 71 47 53 24",
+        "60 rue des Lilas, 44000 Nantes",
+        "08/11/1999"
+      ]
+    },
+    "GT-C004": {
+      "file": "CV_GT-C004_Perrin.docx",
+      "archetype": "dotnet",
+      "title": "Développeur C# .NET",
+      "years": 8.0,
+      "skills": [
+        "SQL Server",
+        "C#",
+        "REST API",
+        ".NET",
+        "Angular",
+        "Microservices",
+        "Git"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "France"
+      ],
+      "availability": "2026-11-20",
+      "rate": 540,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Nicolas Perrin",
+        "nicolas.perrin@mail-perso.fr",
+        "06 57 75 81 23",
+        "41 avenue de Grande-Bretagne, 31000 Toulouse"
+      ]
+    },
+    "GT-C005": {
+      "file": "CV_GT-C005_Blanc.txt",
+      "archetype": "qa",
+      "title": "Ingénieur QA",
+      "years": 6.3,
+      "skills": [
+        "Tests automatisés",
+        "Agile Scrum",
+        "Selenium",
+        "Git",
+        "Python",
+        "JavaScript",
+        "CI/CD"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "France"
+      ],
+      "availability": "2027-01-19",
+      "rate": 480,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Camille Blanc",
+        "camille.blanc@mail-perso.fr",
+        "06 89 78 13 60",
+        "76 allée Jean Jaurès, 31000 Toulouse"
+      ]
+    },
+    "GT-C006": {
+      "file": "CV_GT-C006_Blanc.docx",
+      "archetype": "qa",
+      "title": "Ingénieur QA",
+      "years": 5.2,
+      "skills": [
+        "Selenium",
+        "Tests automatisés",
+        "Agile Scrum",
+        "JavaScript",
+        "CI/CD"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2026-12-20",
+      "rate": 390,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Clara Blanc",
+        "clara.blanc@mail-perso.fr",
+        "06 89 52 21 40",
+        "87 rue Alsace-Lorraine, 31000 Toulouse",
+        "07/03/1998"
+      ]
+    },
+    "GT-C007": {
+      "file": "CV_GT-C007_Haddad.txt",
+      "archetype": "devops",
+      "title": "DevOps Cloud",
+      "years": 7.6,
+      "skills": [
+        "Linux",
+        "Kubernetes",
+        "Docker",
+        "Prometheus",
+        "GCP",
+        "Python"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "France"
+      ],
+      "availability": "2026-11-20",
+      "rate": 600,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Adam Haddad",
+        "adam.haddad@mail-perso.fr",
+        "06 93 45 41 24",
+        "4 rue du Taur, 31000 Toulouse",
+        "17/07/1996"
+      ]
+    },
+    "GT-C008": {
+      "file": "CV_GT-C008_Rousseau.docx",
+      "archetype": "data_scientist",
+      "title": "Machine Learning Engineer",
+      "years": 1.8,
+      "skills": [
+        "Scikit-learn",
+        "Python",
+        "Pandas",
+        "PyTorch",
+        "Deep Learning"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-20",
+      "rate": 370,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Lina Rousseau",
+        "lina.rousseau@mail-perso.fr",
+        "06 27 15 55 79",
+        "44 chemin de la Garonne, 31000 Toulouse"
+      ]
+    },
+    "GT-C009": {
+      "file": "CV_GT-C009_Trabelsi.docx",
+      "archetype": "java_backend",
+      "title": "Développeur Back-end Java",
+      "years": 7.4,
+      "skills": [
+        "REST API",
+        "Microservices",
+        "SQL",
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Angular",
+        "Scikit-learn"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Montpellier"
+      ],
+      "availability": "2027-01-04",
+      "rate": 510,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Karim Trabelsi",
+        "karim.trabelsi@mail-perso.fr",
+        "06 24 46 96 96",
+        "76 boulevard Carnot, 31000 Toulouse"
+      ]
+    },
+    "GT-C010": {
+      "file": "CV_GT-C010_Mercier.docx",
+      "archetype": "devops",
+      "title": "Ingénieur SRE",
+      "years": 7.6,
+      "skills": [
+        "CI/CD",
+        "Linux",
+        "Docker",
+        "GCP",
+        "AWS",
+        "Python"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "France"
+      ],
+      "availability": "2026-11-20",
+      "rate": 630,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Thomas Mercier",
+        "thomas.mercier@mail-perso.fr",
+        "06 22 77 15 39",
+        "28 chemin de la Garonne, 31000 Toulouse"
+      ]
+    },
+    "GT-C011": {
+      "file": "CV_GT-C011_Perrin.md",
+      "archetype": "ai_engineer",
+      "title": "Ingénieur IA générative",
+      "years": 8.8,
+      "skills": [
+        "RAG",
+        "LangChain",
+        "FastAPI",
+        "Prompt Engineering",
+        "Vector Databases",
+        "Azure"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-20",
+      "rate": 610,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Océane Perrin",
+        "oceane.perrin@mail-perso.fr",
+        "06 51 40 48 28",
+        "85 allée Jean Jaurès, 31000 Toulouse",
+        "10/05/1995"
+      ]
+    },
+    "GT-C012": {
+      "file": "CV_GT-C012_Fournier.docx",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data",
+      "years": 8.2,
+      "skills": [
+        "Spark",
+        "SQL",
+        "Airflow",
+        "Python",
+        "dbt",
+        "Databricks",
+        "Snowflake",
+        "PostgreSQL"
+      ],
+      "city": "Bordeaux",
+      "mobility": [
+        "Bordeaux",
+        "Toulouse"
+      ],
+      "availability": "2027-01-19",
+      "rate": 500,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Julien Fournier",
+        "julien.fournier@mail-perso.fr",
+        "06 18 26 45 89",
+        "82 allée Jean Jaurès, 33000 Bordeaux"
+      ]
+    },
+    "GT-C013": {
+      "file": "CV_GT-C013_Bonnet.txt",
+      "archetype": "java_backend",
+      "title": "Développeur Java",
+      "years": 7.8,
+      "skills": [
+        "Java",
+        "SQL",
+        "Microservices",
+        "Git",
+        "Hibernate",
+        "Angular"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris",
+        "Nantes"
+      ],
+      "availability": "2026-11-20",
+      "rate": 490,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Antoine Bonnet",
+        "antoine.bonnet@mail-perso.fr",
+        "06 82 17 81 69",
+        "87 chemin de la Garonne, 75011 Paris",
+        "01/07/1994"
+      ]
+    },
+    "GT-C014": {
+      "file": "CV_GT-C014_Moreau.docx",
+      "archetype": "ai_engineer",
+      "title": "AI Engineer",
+      "years": 7.1,
+      "skills": [
+        "RAG",
+        "LangChain",
+        "FastAPI",
+        "Prompt Engineering",
+        "Docker",
+        "NLP"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-20",
+      "rate": 640,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Yanis Moreau",
+        "yanis.moreau@mail-perso.fr",
+        "06 15 19 34 85",
+        "93 rue du Taur, 31000 Toulouse"
+      ]
+    },
+    "GT-C015": {
+      "file": "CV_GT-C015_Dubois.txt",
+      "archetype": "java_backend",
+      "title": "Développeur Back-end Java",
+      "years": 1.4,
+      "skills": [
+        "Microservices",
+        "REST API",
+        "Java",
+        "Spring Boot",
+        "Kafka",
+        "Hibernate"
+      ],
+      "city": "Bordeaux",
+      "mobility": [
+        "Bordeaux",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 370,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Emma Dubois",
+        "emma.dubois@mail-perso.fr",
+        "06 20 30 44 67",
+        "116 allée Jean Jaurès, 33000 Bordeaux",
+        "14/02/2001"
+      ]
+    },
+    "GT-C016": {
+      "file": "CV_GT-C016_Roux.docx",
+      "archetype": "java_backend",
+      "title": "Développeur Java",
+      "years": 9.7,
+      "skills": [
+        "Java",
+        "REST API",
+        "SQL",
+        "Spring Boot",
+        "Microservices",
+        "Hibernate",
+        "PostgreSQL",
+        "Angular",
+        "Kafka"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-20",
+      "rate": 510,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Hugo Roux",
+        "hugo.roux@mail-perso.fr",
+        "06 91 22 66 31",
+        "89 rue Alsace-Lorraine, 31000 Toulouse"
+      ]
+    },
+    "GT-C017": {
+      "file": "CV_GT-C017_Faure.txt",
+      "archetype": "java_backend",
+      "title": "Développeur Java",
+      "years": 3.0,
+      "skills": [
+        "Microservices",
+        "REST API",
+        "Java",
+        "Spring Boot",
+        "Angular",
+        "Kafka"
+      ],
+      "city": "Bordeaux",
+      "mobility": [
+        "Bordeaux"
+      ],
+      "availability": "2027-04-19",
+      "rate": 350,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Pauline Faure",
+        "pauline.faure@mail-perso.fr",
+        "06 86 78 12 90",
+        "66 allée Jean Jaurès, 33000 Bordeaux",
+        "05/05/1997"
+      ]
+    },
+    "GT-C018": {
+      "file": "CV_GT-C018_Trabelsi.md",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data",
+      "years": 8.7,
+      "skills": [
+        "SQL",
+        "Airflow",
+        "Python",
+        "PostgreSQL",
+        "AWS",
+        "BigQuery"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2026-11-20",
+      "rate": 570,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Yanis Trabelsi",
+        "yanis.trabelsi@mail-perso.fr",
+        "06 33 27 71 51",
+        "120 avenue de Grande-Bretagne, 69003 Lyon",
+        "13/04/1992"
+      ]
+    },
+    "GT-C019": {
+      "file": "CV_GT-C019_Gauthier.docx",
+      "archetype": "ai_engineer",
+      "title": "AI Engineer",
+      "years": 4.7,
+      "skills": [
+        "RAG",
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "LLM",
+        "Azure",
+        "NLP"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris"
+      ],
+      "availability": "2027-01-19",
+      "rate": 580,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Salomé Gauthier",
+        "salome.gauthier@mail-perso.fr",
+        "06 27 15 14 48",
+        "64 rue des Lilas, 75011 Paris",
+        "18/03/1996"
+      ]
+    },
+    "GT-C020": {
+      "file": "CV_GT-C020_Blanc.docx",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data",
+      "years": 4.0,
+      "skills": [
+        "SQL",
+        "Spark",
+        "Python",
+        "Airflow",
+        "Databricks",
+        "PostgreSQL",
+        "BigQuery"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2026-11-20",
+      "rate": 450,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Rayan Blanc",
+        "rayan.blanc@mail-perso.fr",
+        "06 91 89 51 90",
+        "41 avenue de Grande-Bretagne, 69003 Lyon"
+      ]
+    },
+    "GT-C021": {
+      "file": "CV_GT-C021_Moreau.docx",
+      "archetype": "pm",
+      "title": "Chef de projet IT",
+      "years": 11.7,
+      "skills": [
+        "Gestion de projet",
+        "Agile Scrum",
+        "Power BI",
+        "Microsoft 365",
+        "SQL"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 700,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Pauline Moreau",
+        "pauline.moreau@mail-perso.fr",
+        "06 99 67 50 18",
+        "39 rue des Lilas, 31000 Toulouse"
+      ]
+    },
+    "GT-C022": {
+      "file": "CV_GT-C022_Haddad.md",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data",
+      "years": 13.3,
+      "skills": [
+        "SQL",
+        "dbt",
+        "Airflow",
+        "Spark",
+        "Python",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "Snowflake"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 660,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Chloé Haddad",
+        "chloe.haddad@mail-perso.fr",
+        "06 53 36 97 91",
+        "110 rue Alsace-Lorraine, 31000 Toulouse"
+      ]
+    },
+    "GT-C023": {
+      "file": "CV_GT-C023_Haddad.docx",
+      "archetype": "java_backend",
+      "title": "Développeur Back-end Java",
+      "years": 4.4,
+      "skills": [
+        "Microservices",
+        "Spring Boot",
+        "REST API",
+        "SQL",
+        "Java",
+        "Git",
+        "Kafka",
+        "Hibernate"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2027-01-04",
+      "rate": 440,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Mehdi Haddad",
+        "mehdi.haddad@mail-perso.fr",
+        "06 80 52 55 99",
+        "59 rue Alsace-Lorraine, 31000 Toulouse",
+        "08/02/1998"
+      ]
+    },
+    "GT-C024": {
+      "file": "CV_GT-C024_Rahmani.txt",
+      "archetype": "java_backend",
+      "title": "Développeur Java",
+      "years": 1.7,
+      "skills": [
+        "Spring Boot",
+        "Java",
+        "REST API",
+        "SQL",
+        "Docker",
+        "Git"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris",
+        "Full remote"
+      ],
+      "availability": "2026-12-05",
+      "rate": 360,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Salomé Rahmani",
+        "salome.rahmani@mail-perso.fr",
+        "06 57 31 87 87",
+        "96 rue du Taur, 75011 Paris",
+        "27/03/2000"
+      ]
+    },
+    "GT-C025": {
+      "file": "CV_GT-C025_Faure.docx",
+      "archetype": "frontend",
+      "title": "Développeur Web Front",
+      "years": 7.6,
+      "skills": [
+        "React",
+        "JavaScript",
+        "HTML/CSS",
+        "TypeScript",
+        "GraphQL",
+        "Node.js",
+        "Tests automatisés",
+        "Git"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2026-11-20",
+      "rate": 500,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Hugo Faure",
+        "hugo.faure@mail-perso.fr",
+        "06 60 57 53 81",
+        "47 chemin de la Garonne, 69003 Lyon",
+        "20/09/1993"
+      ]
+    },
+    "GT-C026": {
+      "file": "CV_GT-C026_Lefèvre.docx",
+      "archetype": "ai_engineer",
+      "title": "Ingénieur IA",
+      "years": 5.6,
+      "skills": [
+        "LLM",
+        "LangChain",
+        "RAG",
+        "FastAPI",
+        "NLP",
+        "Docker",
+        "Azure"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris"
+      ],
+      "availability": "2026-11-20",
+      "rate": 540,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Nicolas Lefèvre",
+        "nicolas.lefevre@mail-perso.fr",
+        "06 97 77 21 92",
+        "86 boulevard Carnot, 75011 Paris"
+      ]
+    },
+    "GT-C027": {
+      "file": "CV_GT-C027_Rahmani.md",
+      "archetype": "data_engineer",
+      "title": "Data Engineer",
+      "years": 7.1,
+      "skills": [
+        "SQL",
+        "Airflow",
+        "Python",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 510,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Léa Rahmani",
+        "lea.rahmani@mail-perso.fr",
+        "06 32 63 32 14",
+        "108 boulevard Carnot, 69003 Lyon"
+      ]
+    },
+    "GT-C028": {
+      "file": "CV_GT-C028_Lefèvre.docx",
+      "archetype": "qa",
+      "title": "QA Engineer",
+      "years": 6.4,
+      "skills": [
+        "Agile Scrum",
+        "Selenium",
+        "Tests automatisés",
+        "Git",
+        "JavaScript",
+        "Python"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2026-11-30",
+      "rate": 400,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Sarah Lefèvre",
+        "sarah.lefevre@mail-perso.fr",
+        "06 79 92 17 77",
+        "5 chemin de la Garonne, 69003 Lyon"
+      ]
+    },
+    "GT-C029": {
+      "file": "CV_GT-C029_Ziani.txt",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data",
+      "years": 13.7,
+      "skills": [
+        "Airflow",
+        "SQL",
+        "dbt",
+        "Python",
+        "Spark",
+        "Docker",
+        "Snowflake",
+        "PostgreSQL",
+        "Java"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2027-05-19",
+      "rate": 690,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Thomas Ziani",
+        "thomas.ziani@mail-perso.fr",
+        "06 30 32 62 13",
+        "23 rue du Taur, 31000 Toulouse"
+      ]
+    },
+    "GT-C030": {
+      "file": "CV_GT-C030_Laurent.docx",
+      "archetype": "java_backend",
+      "title": "Ingénieur Java Spring",
+      "years": 13.8,
+      "skills": [
+        "Spring Boot",
+        "SQL",
+        "REST API",
+        "Microservices",
+        "Java",
+        "Git",
+        "Hibernate",
+        "Angular",
+        "PostgreSQL"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris"
+      ],
+      "availability": "2027-01-19",
+      "rate": 630,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Emma Laurent",
+        "emma.laurent@mail-perso.fr",
+        "06 45 76 72 90",
+        "31 rue Alsace-Lorraine, 75011 Paris"
+      ]
+    },
+    "GT-C031": {
+      "file": "CV_GT-C031_Blanc.docx",
+      "archetype": "frontend",
+      "title": "Développeur React",
+      "years": 3.0,
+      "skills": [
+        "React",
+        "TypeScript",
+        "HTML/CSS",
+        "JavaScript",
+        "Angular",
+        "Git",
+        "Vue.js"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris",
+        "Bordeaux"
+      ],
+      "availability": "2027-01-04",
+      "rate": 380,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Nour Blanc",
+        "nour.blanc@mail-perso.fr",
+        "06 40 58 83 55",
+        "74 rue Alsace-Lorraine, 75011 Paris"
+      ]
+    },
+    "GT-C032": {
+      "file": "CV_GT-C032_Girard.docx",
+      "archetype": "java_backend",
+      "title": "Développeur Java",
+      "years": 9.0,
+      "skills": [
+        "Java",
+        "SQL",
+        "Microservices",
+        "Git",
+        "Angular",
+        "PostgreSQL",
+        "Hibernate"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris",
+        "France"
+      ],
+      "availability": "2026-11-30",
+      "rate": 530,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Emma Girard",
+        "emma.girard@mail-perso.fr",
+        "06 45 34 24 14",
+        "104 rue du Taur, 75011 Paris"
+      ]
+    },
+    "GT-C033": {
+      "file": "CV_GT-C033_Girard.txt",
+      "archetype": "pm",
+      "title": "Product Owner",
+      "years": 10.9,
+      "skills": [
+        "Gestion de projet",
+        "Agile Scrum",
+        "Microsoft 365",
+        "Power BI",
+        "SQL"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Nantes"
+      ],
+      "availability": "2026-11-20",
+      "rate": 680,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Manon Girard",
+        "manon.girard@mail-perso.fr",
+        "06 78 74 98 63",
+        "70 rue des Lilas, 31000 Toulouse"
+      ]
+    },
+    "GT-C034": {
+      "file": "CV_GT-C034_Chevalier.docx",
+      "archetype": "frontend",
+      "title": "Développeur React",
+      "years": 9.5,
+      "skills": [
+        "React",
+        "JavaScript",
+        "HTML/CSS",
+        "TypeScript",
+        "GraphQL",
+        "Tests automatisés",
+        "Angular"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2026-11-20",
+      "rate": 450,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Karim Chevalier",
+        "karim.chevalier@mail-perso.fr",
+        "06 16 16 46 73",
+        "77 chemin de la Garonne, 69003 Lyon"
+      ]
+    },
+    "GT-C035": {
+      "file": "CV_GT-C035_Faure.docx",
+      "archetype": "ai_engineer",
+      "title": "AI Engineer",
+      "years": 4.5,
+      "skills": [
+        "LLM",
+        "LangChain",
+        "RAG",
+        "FastAPI",
+        "NLP",
+        "LangGraph",
+        "Vector Databases"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris",
+        "Nantes"
+      ],
+      "availability": "2026-11-20",
+      "rate": 550,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Adam Faure",
+        "adam.faure@mail-perso.fr",
+        "06 56 96 40 66",
+        "79 rue Alsace-Lorraine, 75011 Paris"
+      ]
+    },
+    "GT-C036": {
+      "file": "CV_GT-C036_Lefèvre.docx",
+      "archetype": "data_scientist",
+      "title": "Machine Learning Engineer",
+      "years": 4.0,
+      "skills": [
+        "Machine Learning",
+        "SQL",
+        "Python",
+        "MLOps",
+        "NLP",
+        "Computer Vision"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Nantes"
+      ],
+      "availability": "2026-11-20",
+      "rate": 460,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Nour Lefèvre",
+        "nour.lefevre@mail-perso.fr",
+        "06 19 56 42 41",
+        "93 rue du Taur, 31000 Toulouse"
+      ]
+    },
+    "GT-C037": {
+      "file": "CV_GT-C037_Benali.docx",
+      "archetype": "devops",
+      "title": "Ingénieur SRE",
+      "years": 7.3,
+      "skills": [
+        "Linux",
+        "Kubernetes",
+        "Docker",
+        "Prometheus",
+        "Python"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 600,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Yanis Benali",
+        "yanis.benali@mail-perso.fr",
+        "06 94 47 49 67",
+        "78 rue du Taur, 31000 Toulouse"
+      ]
+    },
+    "GT-C038": {
+      "file": "CV_GT-C038_Lefèvre.docx",
+      "archetype": "devops",
+      "title": "DevOps Cloud",
+      "years": 7.0,
+      "skills": [
+        "CI/CD",
+        "Linux",
+        "Docker",
+        "AWS",
+        "GCP",
+        "Python",
+        "Bash"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 600,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Salomé Lefèvre",
+        "salome.lefevre@mail-perso.fr",
+        "06 54 16 22 65",
+        "30 chemin de la Garonne, 31000 Toulouse",
+        "20/10/1993"
+      ]
+    },
+    "GT-C039": {
+      "file": "CV_GT-C039_Roux.txt",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data",
+      "years": 5.0,
+      "skills": [
+        "SQL",
+        "Spark",
+        "Python",
+        "Airflow",
+        "Databricks",
+        "PostgreSQL"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2027-04-19",
+      "rate": 450,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Mehdi Roux",
+        "mehdi.roux@mail-perso.fr",
+        "06 67 23 53 20",
+        "65 rue du Taur, 69003 Lyon",
+        "08/12/1995"
+      ]
+    },
+    "GT-C040": {
+      "file": "CV_GT-C040_Girard.docx",
+      "archetype": "ai_engineer",
+      "title": "Ingénieur IA générative",
+      "years": 13.1,
+      "skills": [
+        "Python",
+        "LangChain",
+        "LLM",
+        "FastAPI",
+        "Azure",
+        "Docker"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Paris"
+      ],
+      "availability": "2026-11-20",
+      "rate": 770,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Adam Girard",
+        "adam.girard@mail-perso.fr",
+        "06 99 72 25 13",
+        "81 allée Jean Jaurès, 31000 Toulouse"
+      ]
+    },
+    "GT-C041": {
+      "file": "CV_GT-C041_Dubois.txt",
+      "archetype": "ai_engineer",
+      "title": "Ingénieur IA",
+      "years": 8.0,
+      "skills": [
+        "RAG",
+        "LangChain",
+        "FastAPI",
+        "Prompt Engineering",
+        "Docker"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2027-04-19",
+      "rate": 630,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Julien Dubois",
+        "julien.dubois@mail-perso.fr",
+        "06 50 36 57 50",
+        "53 rue des Lilas, 31000 Toulouse"
+      ]
+    },
+    "GT-C042": {
+      "file": "CV_GT-C042_Chevalier.txt",
+      "archetype": "qa",
+      "title": "Testeur automaticien",
+      "years": 3.5,
+      "skills": [
+        "Agile Scrum",
+        "Selenium",
+        "Tests automatisés",
+        "Git",
+        "Java",
+        "CI/CD"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2026-11-30",
+      "rate": 410,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Camille Chevalier",
+        "camille.chevalier@mail-perso.fr",
+        "06 32 23 22 77",
+        "20 avenue de Grande-Bretagne, 69003 Lyon",
+        "17/05/1998"
+      ]
+    },
+    "GT-C043": {
+      "file": "CV_GT-C043_Trabelsi.md",
+      "archetype": "devops",
+      "title": "Ingénieur DevOps",
+      "years": 10.8,
+      "skills": [
+        "Linux",
+        "CI/CD",
+        "Docker",
+        "Terraform",
+        "Azure",
+        "AWS",
+        "Bash"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "France"
+      ],
+      "availability": "2026-11-20",
+      "rate": 730,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Amira Trabelsi",
+        "amira.trabelsi@mail-perso.fr",
+        "06 17 75 20 33",
+        "9 allée Jean Jaurès, 31000 Toulouse",
+        "28/04/1990"
+      ]
+    },
+    "GT-C044": {
+      "file": "CV_GT-C044_Bonnet.docx",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data",
+      "years": 5.2,
+      "skills": [
+        "SQL",
+        "Spark",
+        "Python",
+        "Airflow",
+        "PostgreSQL",
+        "Snowflake",
+        "Kafka"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2026-11-20",
+      "rate": 420,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Camille Bonnet",
+        "camille.bonnet@mail-perso.fr",
+        "06 83 61 91 63",
+        "38 rue des Lilas, 69003 Lyon"
+      ]
+    },
+    "GT-C045": {
+      "file": "CV_GT-C045_Bernard.txt",
+      "archetype": "pm",
+      "title": "Chef de projet Data",
+      "years": 2.5,
+      "skills": [
+        "Agile Scrum",
+        "Gestion de projet",
+        "Salesforce",
+        "SAP",
+        "Power BI",
+        "Microsoft 365"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon",
+        "Full remote"
+      ],
+      "availability": "2027-05-19",
+      "rate": 430,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Hugo Bernard",
+        "hugo.bernard@mail-perso.fr",
+        "06 35 56 65 18",
+        "86 rue Alsace-Lorraine, 69003 Lyon"
+      ]
+    },
+    "GT-C046": {
+      "file": "CV_GT-C046_Perrin.txt",
+      "archetype": "frontend",
+      "title": "Développeur React",
+      "years": 8.0,
+      "skills": [
+        "React",
+        "JavaScript",
+        "HTML/CSS",
+        "TypeScript",
+        "Node.js",
+        "GraphQL"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon",
+        "Montpellier"
+      ],
+      "availability": "2027-04-19",
+      "rate": 470,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Clara Perrin",
+        "clara.perrin@mail-perso.fr",
+        "06 78 72 82 48",
+        "61 chemin de la Garonne, 69003 Lyon",
+        "11/11/1995"
+      ]
+    },
+    "GT-C047": {
+      "file": "CV_GT-C047_Lefèvre.txt",
+      "archetype": "java_backend",
+      "title": "Développeur Java",
+      "years": 1.8,
+      "skills": [
+        "Microservices",
+        "REST API",
+        "Java",
+        "Spring Boot",
+        "Angular",
+        "Kafka",
+        "Hibernate"
+      ],
+      "city": "Bordeaux",
+      "mobility": [
+        "Bordeaux",
+        "Paris"
+      ],
+      "availability": "2026-11-30",
+      "rate": 340,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Lucas Lefèvre",
+        "lucas.lefevre@mail-perso.fr",
+        "06 70 67 88 10",
+        "116 rue des Lilas, 33000 Bordeaux",
+        "07/03/1999"
+      ]
+    },
+    "GT-C048": {
+      "file": "CV_GT-C048_Perrin.txt",
+      "archetype": "java_backend",
+      "title": "Développeur Back-end Java",
+      "years": 6.2,
+      "skills": [
+        "Java",
+        "REST API",
+        "SQL",
+        "Microservices",
+        "Spring Boot",
+        "Git",
+        "Hibernate",
+        "PostgreSQL"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2027-01-04",
+      "rate": 490,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Salomé Perrin",
+        "salome.perrin@mail-perso.fr",
+        "06 71 38 23 54",
+        "109 allée Jean Jaurès, 69003 Lyon"
+      ]
+    },
+    "GT-C049": {
+      "file": "CV_GT-C049_Haddad.txt",
+      "archetype": "devops",
+      "title": "Ingénieur SRE",
+      "years": 8.0,
+      "skills": [
+        "CI/CD",
+        "Linux",
+        "Docker",
+        "AWS",
+        "GCP"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "France"
+      ],
+      "availability": "2027-04-19",
+      "rate": 600,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Inès Haddad",
+        "ines.haddad@mail-perso.fr",
+        "06 44 23 26 21",
+        "24 boulevard Carnot, 31000 Toulouse"
+      ]
+    },
+    "GT-C050": {
+      "file": "CV_GT-C050_Rousseau.txt",
+      "archetype": "dotnet",
+      "title": "Développeur C# .NET",
+      "years": 4.4,
+      "skills": [
+        "SQL Server",
+        "REST API",
+        "C#",
+        "Azure",
+        "Docker",
+        "Microservices",
+        "Git"
+      ],
+      "city": "Paris",
+      "mobility": [
+        "Paris",
+        "France"
+      ],
+      "availability": "2027-01-19",
+      "rate": 400,
+      "languages": [
+        "français"
+      ],
+      "pii": [
+        "Yanis Rousseau",
+        "yanis.rousseau@mail-perso.fr",
+        "06 68 29 65 32",
+        "94 allée Jean Jaurès, 75011 Paris"
+      ]
+    },
+    "GT-C051": {
+      "file": "CV_GT-C051_Martin.docx",
+      "archetype": "frontend",
+      "title": "Développeur Front-end",
+      "years": 1.7,
+      "skills": [
+        "TypeScript",
+        "React",
+        "JavaScript",
+        "HTML/CSS",
+        "Vue.js",
+        "Git",
+        "GraphQL",
+        "Node.js"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-20",
+      "rate": 350,
+      "languages": [
+        "français",
+        "anglais",
+        "espagnol"
+      ],
+      "pii": [
+        "Clara Martin",
+        "clara.martin@mail-perso.fr",
+        "06 42 32 24 94",
+        "111 rue des Lilas, 31000 Toulouse",
+        "12/04/2000"
+      ]
+    },
+    "GT-C052": {
+      "file": "CV_GT-C052_Ziani.txt",
+      "archetype": "pm",
+      "title": "Chef de projet Data",
+      "years": 12.0,
+      "skills": [
+        "Gestion de projet",
+        "Agile Scrum",
+        "Power BI",
+        "Microsoft 365"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2027-04-19",
+      "rate": 710,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Camille Ziani",
+        "camille.ziani@mail-perso.fr",
+        "06 18 83 23 78",
+        "24 rue Alsace-Lorraine, 31000 Toulouse",
+        "15/02/1989"
+      ]
+    },
+    "GT-C053": {
+      "file": "CV_GT-C053_Benali.docx",
+      "archetype": "java_backend",
+      "title": "Développeur Back-end Java",
+      "years": 14.5,
+      "skills": [
+        "SQL",
+        "Java",
+        "Microservices",
+        "Spring Boot",
+        "REST API",
+        "Angular",
+        "Hibernate"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2027-03-20",
+      "rate": 700,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Nicolas Benali",
+        "nicolas.benali@mail-perso.fr",
+        "06 87 86 89 38",
+        "100 allée Jean Jaurès, 31000 Toulouse"
+      ]
+    },
+    "GT-C054": {
+      "file": "CV_GT-C054_Moreau.txt",
+      "archetype": "dotnet",
+      "title": "Ingénieur .NET Azure",
+      "years": 7.5,
+      "skills": [
+        "SQL Server",
+        "C#",
+        "REST API",
+        ".NET",
+        "Angular",
+        "Docker",
+        "Git"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 540,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Hugo Moreau",
+        "hugo.moreau@mail-perso.fr",
+        "06 48 88 78 21",
+        "65 rue du Taur, 31000 Toulouse",
+        "19/03/1995"
+      ]
+    },
+    "GT-C055": {
+      "file": "CV_GT-C055_Blanc.txt",
+      "archetype": "devops",
+      "title": "Ingénieur SRE",
+      "years": 10.3,
+      "skills": [
+        "CI/CD",
+        "Docker",
+        "Terraform",
+        "Linux",
+        "Azure",
+        "Ansible",
+        "GCP",
+        "AWS",
+        "SQL Server"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Bordeaux"
+      ],
+      "availability": "2027-01-04",
+      "rate": 730,
+      "languages": [
+        "français",
+        "anglais",
+        "espagnol"
+      ],
+      "pii": [
+        "Maxime Blanc",
+        "maxime.blanc@mail-perso.fr",
+        "06 15 65 51 87",
+        "33 rue des Lilas, 31000 Toulouse",
+        "22/10/1993"
+      ]
+    },
+    "GT-C056": {
+      "file": "CV_GT-C056_Garcia.txt",
+      "archetype": "automation",
+      "title": "Consultant Automatisation",
+      "years": 4.5,
+      "skills": [
+        "Python",
+        "Power Automate",
+        "REST API",
+        "Make",
+        "LLM",
+        "Azure",
+        "Salesforce"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "availability": "2026-11-20",
+      "rate": 410,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Emma Garcia",
+        "emma.garcia@mail-perso.fr",
+        "06 88 85 40 41",
+        "7 rue du Taur, 31000 Toulouse"
+      ]
+    },
+    "GT-C057": {
+      "file": "CV_GT-C057_Perrin.txt",
+      "archetype": "data_engineer",
+      "title": "Data Engineer Cloud",
+      "years": 8.0,
+      "skills": [
+        "SQL",
+        "Airflow",
+        "Python",
+        "AWS",
+        "PostgreSQL"
+      ],
+      "city": "Lyon",
+      "mobility": [
+        "Lyon"
+      ],
+      "availability": "2027-04-19",
+      "rate": 540,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Julien Perrin",
+        "julien.perrin@mail-perso.fr",
+        "06 70 78 95 37",
+        "98 avenue de Grande-Bretagne, 69003 Lyon"
+      ]
+    },
+    "GT-C058": {
+      "file": "CV_GT-C058_Blanc.docx",
+      "archetype": "devops",
+      "title": "Ingénieur SRE",
+      "years": 8.0,
+      "skills": [
+        "Linux",
+        "Kubernetes",
+        "Docker",
+        "Prometheus",
+        "GCP"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2027-04-19",
+      "rate": 600,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Emma Blanc",
+        "emma.blanc@mail-perso.fr",
+        "06 88 21 18 49",
+        "51 rue du Taur, 31000 Toulouse"
+      ]
+    },
+    "GT-C059": {
+      "file": "CV_GT-C059_Gauthier.txt",
+      "archetype": "automation",
+      "title": "Développeur Low-code",
+      "years": 6.3,
+      "skills": [
+        "Python",
+        "Power Automate",
+        "REST API",
+        "LLM",
+        "Azure",
+        "Zapier"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-30",
+      "rate": 410,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Nicolas Gauthier",
+        "nicolas.gauthier@mail-perso.fr",
+        "06 68 78 53 79",
+        "46 rue du Taur, 31000 Toulouse"
+      ]
+    },
+    "GT-C060": {
+      "file": "CV_GT-C060_Rahmani.docx",
+      "archetype": "data_scientist",
+      "title": "Machine Learning Engineer",
+      "years": 1.3,
+      "skills": [
+        "Scikit-learn",
+        "Python",
+        "Pandas",
+        "PyTorch",
+        "MLOps",
+        "Deep Learning",
+        "Computer Vision"
+      ],
+      "city": "Toulouse",
+      "mobility": [
+        "Toulouse"
+      ],
+      "availability": "2026-11-30",
+      "rate": 370,
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "pii": [
+        "Yanis Rahmani",
+        "yanis.rahmani@mail-perso.fr",
+        "06 46 55 16 93",
+        "43 rue Alsace-Lorraine, 31000 Toulouse",
+        "12/07/1999"
+      ]
+    }
+  },
+  "needs": {
+    "GT-N01": {
+      "file": "Besoin_GT-N01_AgriData_Sud.md",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data confirmé",
+      "required": [
+        "SQL",
+        "Spark",
+        "Python",
+        "Airflow"
+      ],
+      "nice": [
+        "Databricks",
+        "PostgreSQL"
+      ],
+      "min_years": 3,
+      "seniority": "confirmé",
+      "city": "Lyon",
+      "remote": "hybride",
+      "start": "2026-11-20",
+      "max_rate": 500,
+      "languages": [
+        "anglais"
+      ],
+      "pii": [
+        "Léa Chevalier"
+      ]
+    },
+    "GT-N02": {
+      "file": "Besoin_GT-N02_SkyPort_Services.txt",
+      "archetype": "ai_engineer",
+      "title": "AI Engineer confirmé",
+      "required": [
+        "LLM",
+        "LangChain",
+        "RAG",
+        "FastAPI"
+      ],
+      "nice": [
+        "NLP",
+        "LangGraph"
+      ],
+      "min_years": 3,
+      "seniority": "confirmé",
+      "city": "Paris",
+      "remote": "hybride",
+      "start": "2026-12-20",
+      "max_rate": 580,
+      "languages": [
+        "anglais"
+      ],
+      "pii": [
+        "Adam Roux"
+      ]
+    },
+    "GT-N03": {
+      "file": "Besoin_GT-N03_AssurOuest.txt",
+      "archetype": "java_backend",
+      "title": "Ingénieur Java Spring junior",
+      "required": [
+        "Microservices",
+        "REST API",
+        "Java",
+        "Spring Boot"
+      ],
+      "nice": [
+        "Angular",
+        "Kafka"
+      ],
+      "min_years": 1,
+      "seniority": "junior",
+      "city": "Bordeaux",
+      "remote": "hybride",
+      "start": "2026-12-20",
+      "max_rate": 390,
+      "languages": [],
+      "pii": [
+        "Chloé Blanc"
+      ]
+    },
+    "GT-N04": {
+      "file": "Besoin_GT-N04_BanqueSud.md",
+      "archetype": "data_scientist",
+      "title": "Data Scientist NLP junior",
+      "required": [
+        "Scikit-learn",
+        "Python",
+        "Pandas"
+      ],
+      "nice": [
+        "PyTorch",
+        "MLOps"
+      ],
+      "min_years": 1,
+      "seniority": "junior",
+      "city": "Toulouse",
+      "remote": "sur_site",
+      "start": "2026-12-04",
+      "max_rate": 420,
+      "languages": [],
+      "pii": [
+        "Lina Garcia"
+      ]
+    },
+    "GT-N05": {
+      "file": "Besoin_GT-N05_AgriData_Sud.txt",
+      "archetype": "devops",
+      "title": "Ingénieur SRE senior",
+      "required": [
+        "Linux",
+        "Kubernetes",
+        "Docker"
+      ],
+      "nice": [
+        "Prometheus",
+        "GCP"
+      ],
+      "min_years": 6,
+      "seniority": "senior",
+      "city": "Toulouse",
+      "remote": "full_remote",
+      "start": "2026-12-04",
+      "max_rate": 670,
+      "languages": [],
+      "pii": [
+        "Adam Bernard"
+      ]
+    },
+    "GT-N06": {
+      "file": "Besoin_GT-N06_Aeronov.txt",
+      "archetype": "dotnet",
+      "title": "Développeur C# .NET senior",
+      "required": [
+        "SQL Server",
+        "C#",
+        "REST API",
+        ".NET"
+      ],
+      "nice": [
+        "Angular",
+        "Microservices"
+      ],
+      "min_years": 6,
+      "seniority": "senior",
+      "city": "Toulouse",
+      "remote": "full_remote",
+      "start": "2026-12-04",
+      "max_rate": 570,
+      "languages": [
+        "anglais"
+      ],
+      "pii": [
+        "Salomé Rahmani"
+      ]
+    },
+    "GT-N07": {
+      "file": "Besoin_GT-N07_CityMobility.docx",
+      "archetype": "frontend",
+      "title": "Développeur Front-end senior",
+      "required": [
+        "React",
+        "JavaScript",
+        "HTML/CSS",
+        "TypeScript"
+      ],
+      "nice": [
+        "Node.js",
+        "GraphQL"
+      ],
+      "min_years": 6,
+      "seniority": "senior",
+      "city": "Lyon",
+      "remote": "hybride",
+      "start": "2027-01-04",
+      "max_rate": 530,
+      "languages": [
+        "anglais"
+      ],
+      "pii": [
+        "Karim Faure"
+      ]
+    },
+    "GT-N08": {
+      "file": "Besoin_GT-N08_SkyPort_Services.md",
+      "archetype": "automation",
+      "title": "Consultant Automatisation confirmé",
+      "required": [
+        "Python",
+        "Power Automate",
+        "REST API"
+      ],
+      "nice": [
+        "LLM",
+        "Make"
+      ],
+      "min_years": 3,
+      "seniority": "confirmé",
+      "city": "Toulouse",
+      "remote": "hybride",
+      "start": "2026-12-20",
+      "max_rate": 470,
+      "languages": [],
+      "pii": [
+        "Antoine Dubois"
+      ]
+    },
+    "GT-N09": {
+      "file": "Besoin_GT-N09_Garonne_Énergie.txt",
+      "archetype": "data_engineer",
+      "title": "Ingénieur Data senior",
+      "required": [
+        "SQL",
+        "Airflow",
+        "Python"
+      ],
+      "nice": [
+        "AWS",
+        "PostgreSQL"
+      ],
+      "min_years": 6,
+      "seniority": "senior",
+      "city": "Lyon",
+      "remote": "hybride",
+      "start": "2026-11-20",
+      "max_rate": 600,
+      "languages": [],
+      "pii": [
+        "Bilel Mansouri"
+      ]
+    },
+    "GT-N10": {
+      "file": "Besoin_GT-N10_MedAlpha.docx",
+      "archetype": "java_backend",
+      "title": "Développeur Back-end Java senior",
+      "required": [
+        "Java",
+        "SQL",
+        "Microservices"
+      ],
+      "nice": [
+        "Git",
+        "Angular"
+      ],
+      "min_years": 6,
+      "seniority": "senior",
+      "city": "Paris",
+      "remote": "hybride",
+      "start": "2026-12-04",
+      "max_rate": 580,
+      "languages": [],
+      "pii": [
+        "Clara Trabelsi"
+      ]
+    },
+    "GT-N11": {
+      "file": "Besoin_GT-N11_SkyPort_Services.txt",
+      "archetype": "ai_engineer",
+      "title": "Ingénieur IA senior",
+      "required": [
+        "RAG",
+        "LangChain",
+        "FastAPI"
+      ],
+      "nice": [
+        "Prompt Engineering",
+        "Docker"
+      ],
+      "min_years": 6,
+      "seniority": "senior",
+      "city": "Toulouse",
+      "remote": "hybride",
+      "start": "2026-12-04",
+      "max_rate": 700,
+      "languages": [
+        "anglais"
+      ],
+      "pii": [
+        "Camille Blanc"
+      ]
+    },
+    "GT-N12": {
+      "file": "Besoin_GT-N12_Retailia.docx",
+      "archetype": "qa",
+      "title": "Ingénieur QA confirmé",
+      "required": [
+        "Agile Scrum",
+        "Selenium",
+        "Tests automatisés"
+      ],
+      "nice": [
+        "Java",
+        "Git"
+      ],
+      "min_years": 3,
+      "seniority": "confirmé",
+      "city": "Lyon",
+      "remote": "hybride",
+      "start": "2026-12-20",
+      "max_rate": 420,
+      "languages": [
+        "anglais"
+      ],
+      "pii": [
+        "Lucas Perrin"
+      ]
+    },
+    "GT-N13": {
+      "file": "Besoin_GT-N13_Retailia.txt",
+      "archetype": "devops",
+      "title": "DevOps Cloud senior",
+      "required": [
+        "CI/CD",
+        "Linux",
+        "Docker"
+      ],
+      "nice": [
+        "AWS",
+        "GCP"
+      ],
+      "min_years": 6,
+      "seniority": "senior",
+      "city": "Toulouse",
+      "remote": "hybride",
+      "start": "2027-01-04",
+      "max_rate": 670,
+      "languages": [],
+      "pii": [
+        "Maxime Dubois"
+      ]
+    },
+    "GT-N14": {
+      "file": "Besoin_GT-N14_CityMobility.txt",
+      "archetype": "data_scientist",
+      "title": "Data Scientist NLP confirmé",
+      "required": [
+        "Machine Learning",
+        "SQL",
+        "Python"
+      ],
+      "nice": [
+        "Spark",
+        "MLOps"
+      ],
+      "min_years": 3,
+      "seniority": "confirmé",
+      "city": "Toulouse",
+      "remote": "hybride",
+      "start": "2026-12-04",
+      "max_rate": 520,
+      "languages": [],
+      "pii": [
+        "Margaux Rahmani"
+      ]
+    },
+    "GT-N15": {
+      "file": "Besoin_GT-N15_AgriData_Sud.docx",
+      "archetype": "pm",
+      "title": "Product Owner expert",
+      "required": [
+        "Gestion de projet",
+        "Agile Scrum"
+      ],
+      "nice": [
+        "Power BI",
+        "Microsoft 365"
+      ],
+      "min_years": 10,
+      "seniority": "expert",
+      "city": "Toulouse",
+      "remote": "hybride",
+      "start": "2026-11-20",
+      "max_rate": 790,
+      "languages": [],
+      "pii": [
+        "Karim Garcia"
+      ]
+    }
+  },
+  "gold": {
+    "GT-N01": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 2,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 1,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 2,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N02": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 2,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 2,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 2,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N03": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 2,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 1,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 2,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 1,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N04": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 2,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 2
+    },
+    "GT-N05": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 2,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 1,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 2,
+      "GT-C038": 1,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 1,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N06": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 2,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 2,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N07": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 2,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 2,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N08": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 2,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 2,
+      "GT-C060": 0
+    },
+    "GT-N09": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 2,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 2,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 2,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 1,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N10": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 2,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 2,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N11": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 2,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 2,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N12": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 2,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 2,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 2,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N13": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 1,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 2,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 1,
+      "GT-C038": 2,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 2,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 2,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N14": {
+      "GT-C001": 2,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 0,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 1,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 0,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 2,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    },
+    "GT-N15": {
+      "GT-C001": 0,
+      "GT-C002": 0,
+      "GT-C003": 0,
+      "GT-C004": 0,
+      "GT-C005": 0,
+      "GT-C006": 0,
+      "GT-C007": 0,
+      "GT-C008": 0,
+      "GT-C009": 0,
+      "GT-C010": 0,
+      "GT-C011": 0,
+      "GT-C012": 0,
+      "GT-C013": 0,
+      "GT-C014": 0,
+      "GT-C015": 0,
+      "GT-C016": 0,
+      "GT-C017": 0,
+      "GT-C018": 0,
+      "GT-C019": 0,
+      "GT-C020": 0,
+      "GT-C021": 2,
+      "GT-C022": 0,
+      "GT-C023": 0,
+      "GT-C024": 0,
+      "GT-C025": 0,
+      "GT-C026": 0,
+      "GT-C027": 0,
+      "GT-C028": 0,
+      "GT-C029": 0,
+      "GT-C030": 0,
+      "GT-C031": 0,
+      "GT-C032": 0,
+      "GT-C033": 2,
+      "GT-C034": 0,
+      "GT-C035": 0,
+      "GT-C036": 0,
+      "GT-C037": 0,
+      "GT-C038": 0,
+      "GT-C039": 0,
+      "GT-C040": 0,
+      "GT-C041": 0,
+      "GT-C042": 0,
+      "GT-C043": 0,
+      "GT-C044": 0,
+      "GT-C045": 0,
+      "GT-C046": 0,
+      "GT-C047": 0,
+      "GT-C048": 0,
+      "GT-C049": 0,
+      "GT-C050": 0,
+      "GT-C051": 0,
+      "GT-C052": 0,
+      "GT-C053": 0,
+      "GT-C054": 0,
+      "GT-C055": 0,
+      "GT-C056": 0,
+      "GT-C057": 0,
+      "GT-C058": 0,
+      "GT-C059": 0,
+      "GT-C060": 0
+    }
+  }
+}

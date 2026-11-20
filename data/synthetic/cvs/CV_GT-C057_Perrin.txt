@@ -1,0 +1,30 @@
+Julien Perrin
+Data Engineer Cloud
+Email : julien.perrin@mail-perso.fr | Tél : 06 70 78 95 37
+98 avenue de Grande-Bretagne, 69003 Lyon
+
+Localisation : Lyon | Mobilité : Lyon
+Disponibilité : 19/04/2027
+TJM : 540 €
+Années d'expérience : 8 ans
+
+PROFIL
+Data Engineer Cloud avec 8 ans d'expérience, intervenu(e) dans les secteurs aéronautique, transport.
+
+COMPÉTENCES
+SQL, Airflow, Python, AWS, PostgreSQL
+
+EXPÉRIENCES PROFESSIONNELLES
+Data Engineer Cloud — LogiRail (Lyon)
+05/2020 – Présent
+Migration d'un entrepôt de données vers le cloud. Environnement : Python, SQL, PostgreSQL, AWS, Airflow.
+
+Ingénieur Data — SkyPort Services (Lyon)
+12/2018 – 04/2020
+Migration d'un entrepôt de données vers le cloud. Environnement : PostgreSQL, Airflow, SQL.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2017)
+
+LANGUES
+Français (natif), Anglais (professionnel)

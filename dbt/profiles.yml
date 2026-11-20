@@ -1,0 +1,13 @@
+# Connexion à la base PostgreSQL de TalentFlow (variables d'environnement, pas de secret en dur)
+talentflow:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('PGHOST', 'localhost') }}"
+      port: "{{ env_var('PGPORT', '5432') | int }}"
+      user: "{{ env_var('PGUSER', 'talentflow') }}"
+      password: "{{ env_var('PGPASSWORD', 'talentflow') }}"
+      dbname: "{{ env_var('PGDATABASE', 'talentflow') }}"
+      schema: analytics
+      threads: 4

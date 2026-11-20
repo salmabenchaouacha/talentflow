@@ -1,0 +1,38 @@
+Nicolas Gauthier
+Développeur Low-code
+Email : nicolas.gauthier@mail-perso.fr | Tél : 06 68 78 53 79
+46 rue du Taur, 31000 Toulouse
+
+Localisation : Toulouse | Mobilité : Toulouse
+Disponibilité : 30/11/2026
+TJM : 410 €
+Années d'expérience : 6 ans
+
+PROFIL
+Développeur Low-code avec 6 ans d'expérience, intervenu(e) dans les secteurs retail, santé, énergie.
+
+COMPÉTENCES
+Python, Power Automate, REST API, LLM, Azure, Zapier
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur Low-code — Retailia (Toulouse)
+04/2025 – Présent
+Intégration CRM / outils bureautiques par API. Environnement : Power Automate, Zapier, REST API, LLM.
+
+Ingénieur Automatisation & IA — Garonne Énergie (Toulouse)
+09/2023 – 03/2025
+Intégration CRM / outils bureautiques par API. Environnement : Zapier, Power Automate, LLM, Azure.
+
+Ingénieur Automatisation & IA — Pyrénées Santé (Toulouse)
+01/2022 – 08/2023
+Intégration CRM / outils bureautiques par API. Environnement : REST API, Zapier, Python, Azure, Power Automate.
+
+Développeur Low-code — Pyrénées Santé (Toulouse)
+09/2020 – 12/2021
+Automatisation des processus RH et achats. Environnement : REST API, Python, Zapier.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2019)
+
+LANGUES
+Français (natif), Anglais (professionnel)

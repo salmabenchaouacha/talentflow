@@ -1,0 +1,14 @@
+FICHE DE BESOIN — RÉF GT-N03
+Client : AssurOuest (secteur assurance)
+Intitulé : Ingénieur Java Spring junior
+Contexte : Au sein de la DSI de AssurOuest, renfort d'une équipe sur un projet de développement d'api de gestion de contrats.
+Compétences obligatoires : Microservices, REST API, Java, Spring Boot
+Compétences souhaitées : Angular, Kafka
+Expérience : 1 ans minimum
+Séniorité : junior
+Lieu : Bordeaux
+Télétravail : 2 jours/semaine (hybride)
+Démarrage : 20/12/2026
+Durée : 12 mois
+TJM max : 390 €
+Contact client : Chloé Blanc — chloé@assurouest.fr — 05 61 31 22 33

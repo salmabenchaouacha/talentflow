@@ -1,0 +1,39 @@
+Antoine Bonnet
+Développeur Java
+Email : antoine.bonnet@mail-perso.fr | Tél : 06 82 17 81 69
+87 chemin de la Garonne, 75011 Paris
+Né(e) le 01/07/1994 — Nationalité : française
+
+Localisation : Paris | Mobilité : Paris, Nantes
+Disponibilité : immédiate
+TJM : 490 €
+Années d'expérience : 7 ans
+
+PROFIL
+Développeur Java avec 7 ans d'expérience, intervenu(e) dans les secteurs assurance, aéronautique, banque, énergie.
+
+COMPÉTENCES
+Java, SQL, Microservices, Git, Hibernate, Angular
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur Java — Aeronov (Paris)
+08/2025 – Présent
+Refonte d'un monolithe en microservices. Environnement : Microservices, Java, Hibernate, Git.
+
+Développeur Back-end Java — Garonne Énergie (Paris)
+06/2024 – 07/2025
+Refonte d'un monolithe en microservices. Environnement : SQL, Angular, Git, Hibernate.
+
+Ingénieur Java Spring — AssurOuest (Paris)
+06/2021 – 05/2024
+Refonte d'un monolithe en microservices. Environnement : Angular, Hibernate, SQL.
+
+Ingénieur Java Spring — BanqueSud (Paris)
+03/2019 – 05/2021
+Développement d'API de gestion de contrats. Environnement : Hibernate, Git, SQL.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2018)
+
+LANGUES
+Français (natif), Anglais (professionnel)

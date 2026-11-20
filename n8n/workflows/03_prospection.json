@@ -1,0 +1,261 @@
+{
+  "name": "TalentFlow 03 · Prospection : brouillons hebdo → relecture → envoi des emails approuvés",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [
+                2
+              ],
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "id": "015067cc-446c-5218-bdd4-04e76fed0d07",
+      "name": "Chaque mardi 9h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.TF_API_BASE_URL }}/prospection/generate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d2284b0c-7797-56c6-8eac-c350d4c01888",
+      "name": "Générer les brouillons",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ $env.TF_MAIL_FROM }}",
+        "toEmail": "={{ $env.TF_SALES_EMAIL }}",
+        "subject": "=[TalentFlow] {{ $json.created }} email(s) de prospection à relire",
+        "emailFormat": "html",
+        "html": "=<p>{{ $json.created }} brouillons personnalisés sont prêts.</p><p><a href=\"{{ $env.TF_REVIEW_UI_URL }}\">Les relire et approuver</a></p>",
+        "options": {}
+      },
+      "id": "d06f93f8-05d8-5252-8952-245f21aa97d4",
+      "name": "Demander la relecture",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        200
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "REPLACE_SMTP_ID",
+          "name": "SMTP TalentFlow (Mailpit en démo)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "b1443949-3f87-56a5-b287-d51198d7befe",
+      "name": "Toutes les heures",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.TF_API_BASE_URL }}/prospection",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {},
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "status",
+              "value": "approved"
+            }
+          ]
+        }
+      },
+      "id": "ff026cb0-e04a-5161-a547-1073a40877ce",
+      "name": "Emails approuvés",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ $env.TF_MAIL_FROM }}",
+        "toEmail": "={{ $env.TF_PROSPECT_DEMO_EMAIL }}",
+        "subject": "={{ $json.subject }}",
+        "emailFormat": "html",
+        "html": "={{ $json.body.replace(/\\n/g, '<br>') }}",
+        "options": {}
+      },
+      "id": "54c39eb2-1291-5aa1-a463-d81f193d7839",
+      "name": "Envoyer l'email de prospection",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        460
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "REPLACE_SMTP_ID",
+          "name": "SMTP TalentFlow (Mailpit en démo)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.TF_API_BASE_URL }}/prospection/{{ $('Emails approuvés').item.json.email_id }}/sent",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {},
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "actor",
+              "value": "n8n"
+            }
+          ]
+        }
+      },
+      "id": "1b1fb491-5d57-5a2c-94e0-243bf0f0dcfe",
+      "name": "Marquer prospection envoyée",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        460
+      ]
+    }
+  ],
+  "connections": {
+    "Chaque mardi 9h": {
+      "main": [
+        [
+          {
+            "node": "Générer les brouillons",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Générer les brouillons": {
+      "main": [
+        [
+          {
+            "node": "Demander la relecture",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Toutes les heures": {
+      "main": [
+        [
+          {
+            "node": "Emails approuvés",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Emails approuvés": {
+      "main": [
+        [
+          {
+            "node": "Envoyer l'email de prospection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Envoyer l'email de prospection": {
+      "main": [
+        [
+          {
+            "node": "Marquer prospection envoyée",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Paris"
+  },
+  "tags": [
+    {
+      "name": "talentflow"
+    },
+    {
+      "name": "prospection"
+    }
+  ],
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

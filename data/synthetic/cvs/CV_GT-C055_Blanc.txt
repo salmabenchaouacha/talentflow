@@ -1,0 +1,39 @@
+Maxime Blanc
+Ingénieur SRE
+Email : maxime.blanc@mail-perso.fr | Tél : 06 15 65 51 87
+33 rue des Lilas, 31000 Toulouse
+Né(e) le 22/10/1993 — Nationalité : française
+
+Localisation : Toulouse | Mobilité : Toulouse, Bordeaux
+Disponibilité : 04/01/2027
+TJM : 730 €
+Années d'expérience : 10 ans
+
+PROFIL
+Ingénieur SRE avec 10 ans d'expérience, intervenu(e) dans les secteurs agroalimentaire, banque, santé.
+
+COMPÉTENCES
+CI/CD, Docker, Terraform, Linux, Azure, Ansible, GCP, AWS, SQL Server
+
+EXPÉRIENCES PROFESSIONNELLES
+Ingénieur SRE — Pyrénées Santé (Toulouse)
+07/2025 – Présent
+Mise en place de la chaîne CI/CD. Environnement : AWS, SQL Server, Terraform.
+
+DevOps Cloud — AgriData Sud (Toulouse)
+12/2019 – 06/2025
+Migration vers Kubernetes. Environnement : Docker, AWS, Terraform, Linux.
+
+DevOps Cloud — Capitole Finance (Toulouse)
+09/2018 – 11/2019
+Migration vers Kubernetes. Environnement : Ansible, GCP, SQL Server.
+
+DevOps Cloud — AgriData Sud (Toulouse)
+09/2016 – 08/2018
+Migration vers Kubernetes. Environnement : SQL Server, CI/CD, Linux, AWS.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2015)
+
+LANGUES
+Français (natif), Anglais (professionnel), Espagnol (professionnel)

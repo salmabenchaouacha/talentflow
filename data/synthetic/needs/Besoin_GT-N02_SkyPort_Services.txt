@@ -1,0 +1,15 @@
+FICHE DE BESOIN — RÉF GT-N02
+Client : SkyPort Services (secteur aéronautique)
+Intitulé : AI Engineer confirmé
+Contexte : Au sein de la DSI de SkyPort Services, renfort d'une équipe sur un projet de assistant rag sur la documentation interne.
+Compétences obligatoires : LLM, LangChain, RAG, FastAPI
+Compétences souhaitées : NLP, LangGraph
+Expérience : 3 ans minimum
+Séniorité : confirmé
+Lieu : Paris
+Télétravail : 2 jours/semaine (hybride)
+Démarrage : 20/12/2026
+Durée : 6 mois
+TJM max : 580 €
+Langues : anglais courant
+Contact client : Adam Roux — adam@skyportservices.fr — 05 61 30 22 33

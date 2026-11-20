@@ -1,0 +1,31 @@
+Camille Chevalier
+Testeur automaticien
+Email : camille.chevalier@mail-perso.fr | Tél : 06 32 23 22 77
+20 avenue de Grande-Bretagne, 69003 Lyon
+Né(e) le 17/05/1998 — Nationalité : française
+
+Localisation : Lyon | Mobilité : Lyon
+Disponibilité : 30/11/2026
+TJM : 410 €
+Années d'expérience : 3 ans
+
+PROFIL
+Testeur automaticien avec 3 ans d'expérience, intervenu(e) dans les secteurs assurance, banque.
+
+COMPÉTENCES
+Agile Scrum, Selenium, Tests automatisés, Git, Java, CI/CD
+
+EXPÉRIENCES PROFESSIONNELLES
+Testeur automaticien — AssurOuest (Lyon)
+01/2025 – Présent
+Tests de bout en bout dans la CI. Environnement : Java, Selenium, CI/CD, Git.
+
+Testeur automaticien — Capitole Finance (Lyon)
+06/2023 – 12/2024
+Stratégie de tests et recette. Environnement : CI/CD, Agile Scrum, Java.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2022)
+
+LANGUES
+Français (natif), Anglais (professionnel)

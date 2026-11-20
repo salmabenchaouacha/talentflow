@@ -1,0 +1,15 @@
+FICHE DE BESOIN — RÉF GT-N06
+Client : Aeronov (secteur aéronautique)
+Intitulé : Développeur C# .NET senior
+Contexte : Au sein de la DSI de Aeronov, renfort d'une équipe sur un projet de application métier de gestion des sinistres.
+Compétences obligatoires : SQL Server, C#, REST API, .NET
+Compétences souhaitées : Angular, Microservices
+Expérience : 6 ans minimum
+Séniorité : senior
+Lieu : Toulouse
+Télétravail : full remote
+Démarrage : 04/12/2026
+Durée : 6 mois
+TJM max : 570 €
+Langues : anglais courant
+Contact client : Salomé Rahmani — salomé@aeronov.fr — 05 61 34 22 33

@@ -1,0 +1,14 @@
+FICHE DE BESOIN — RÉF GT-N13
+Client : Retailia (secteur retail)
+Intitulé : DevOps Cloud senior
+Contexte : Au sein de la DSI de Retailia, renfort d'une équipe sur un projet de mise en place de la chaîne ci/cd.
+Compétences obligatoires : CI/CD, Linux, Docker
+Compétences souhaitées : AWS, GCP
+Expérience : 6 ans minimum
+Séniorité : senior
+Lieu : Toulouse
+Télétravail : 2 jours/semaine (hybride)
+Démarrage : 04/01/2027
+Durée : 3 mois
+TJM max : 670 €
+Contact client : Maxime Dubois — maxime@retailia.fr — 05 61 32 22 33

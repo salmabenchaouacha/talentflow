@@ -1,0 +1,30 @@
+Julien Dubois
+Ingénieur IA
+Email : julien.dubois@mail-perso.fr | Tél : 06 50 36 57 50
+53 rue des Lilas, 31000 Toulouse
+
+Localisation : Toulouse | Mobilité : Toulouse
+Disponibilité : 19/04/2027
+TJM : 630 €
+Années d'expérience : 8 ans
+
+PROFIL
+Ingénieur IA avec 8 ans d'expérience, intervenu(e) dans les secteurs aéronautique, santé.
+
+COMPÉTENCES
+RAG, LangChain, FastAPI, Prompt Engineering, Docker
+
+EXPÉRIENCES PROFESSIONNELLES
+Ingénieur IA — SkyPort Services (Toulouse)
+03/2023 – Présent
+Agent IA de qualification de tickets. Environnement : Docker, Prompt Engineering, LangChain, RAG, FastAPI.
+
+AI Engineer — MedAlpha (Toulouse)
+12/2018 – 02/2023
+Agent IA de qualification de tickets. Environnement : Docker, LangChain, Prompt Engineering, FastAPI.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2017)
+
+LANGUES
+Français (natif), Anglais (professionnel)

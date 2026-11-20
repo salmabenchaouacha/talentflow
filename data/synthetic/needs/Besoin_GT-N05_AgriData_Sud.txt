@@ -1,0 +1,14 @@
+FICHE DE BESOIN — RÉF GT-N05
+Client : AgriData Sud (secteur agroalimentaire)
+Intitulé : Ingénieur SRE senior
+Contexte : Au sein de la DSI de AgriData Sud, renfort d'une équipe sur un projet de mise en place de la chaîne ci/cd.
+Compétences obligatoires : Linux, Kubernetes, Docker
+Compétences souhaitées : Prometheus, GCP
+Expérience : 6 ans minimum
+Séniorité : senior
+Lieu : Toulouse
+Télétravail : full remote
+Démarrage : 04/12/2026
+Durée : 6 mois
+TJM max : 670 €
+Contact client : Adam Bernard — adam@agridatasud.fr — 05 61 33 22 33

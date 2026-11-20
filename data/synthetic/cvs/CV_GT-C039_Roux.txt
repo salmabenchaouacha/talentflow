@@ -1,0 +1,39 @@
+Mehdi Roux
+Ingénieur Data
+Email : mehdi.roux@mail-perso.fr | Tél : 06 67 23 53 20
+65 rue du Taur, 69003 Lyon
+Né(e) le 08/12/1995 — Nationalité : française
+
+Localisation : Lyon | Mobilité : Lyon
+Disponibilité : 19/04/2027
+TJM : 450 €
+Années d'expérience : 5 ans
+
+PROFIL
+Ingénieur Data avec 5 ans d'expérience, intervenu(e) dans les secteurs agroalimentaire, aéronautique, industrie, énergie.
+
+COMPÉTENCES
+SQL, Spark, Python, Airflow, Databricks, PostgreSQL
+
+EXPÉRIENCES PROFESSIONNELLES
+Ingénieur Data — Novasys Industrie (Lyon)
+10/2025 – Présent
+Migration d'un entrepôt de données vers le cloud. Environnement : Python, Airflow, Databricks, Spark.
+
+Data Engineer Cloud — Aeronov (Lyon)
+01/2024 – 09/2025
+Migration d'un entrepôt de données vers le cloud. Environnement : PostgreSQL, Python, SQL, Spark, Airflow.
+
+Data Engineer — Garonne Énergie (Lyon)
+12/2022 – 12/2023
+Migration d'un entrepôt de données vers le cloud. Environnement : PostgreSQL, Databricks, Spark, Airflow.
+
+Data Engineer — AgriData Sud (Lyon)
+12/2021 – 11/2022
+Migration d'un entrepôt de données vers le cloud. Environnement : Python, PostgreSQL, Airflow.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2020)
+
+LANGUES
+Français (natif), Anglais (professionnel)

@@ -1,0 +1,17 @@
+name: talentflow
+version: "1.0.0"
+config-version: 2
+profile: talentflow
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  talentflow:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts

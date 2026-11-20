@@ -1,0 +1,39 @@
+Hugo Moreau
+Ingénieur .NET Azure
+Email : hugo.moreau@mail-perso.fr | Tél : 06 48 88 78 21
+65 rue du Taur, 31000 Toulouse
+Né(e) le 19/03/1995 — Nationalité : française
+
+Localisation : Toulouse | Mobilité : Toulouse, Full remote
+Disponibilité : immédiate
+TJM : 540 €
+Années d'expérience : 7 ans
+
+PROFIL
+Ingénieur .NET Azure avec 7 ans d'expérience, intervenu(e) dans les secteurs agroalimentaire, banque, transport, énergie.
+
+COMPÉTENCES
+SQL Server, C#, REST API, .NET, Angular, Docker, Git
+
+EXPÉRIENCES PROFESSIONNELLES
+Ingénieur .NET Azure — Capitole Finance (Toulouse)
+03/2024 – Présent
+Portail client et back-office. Environnement : SQL Server, Git, Docker, Angular, REST API.
+
+Ingénieur .NET Azure — AgriData Sud (Toulouse)
+07/2022 – 02/2024
+Portail client et back-office. Environnement : Git, Angular, .NET.
+
+Ingénieur .NET Azure — LogiRail (Toulouse)
+07/2021 – 06/2022
+API de facturation. Environnement : Angular, REST API, Docker, .NET, SQL Server.
+
+Développeur C# .NET — Garonne Énergie (Toulouse)
+06/2019 – 06/2021
+API de facturation. Environnement : SQL Server, Docker, Git, C#.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2018)
+
+LANGUES
+Français (natif), Anglais (professionnel)

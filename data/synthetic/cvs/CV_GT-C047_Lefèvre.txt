@@ -1,0 +1,27 @@
+Lucas Lefèvre
+Développeur Java
+Email : lucas.lefevre@mail-perso.fr | Tél : 06 70 67 88 10
+116 rue des Lilas, 33000 Bordeaux
+Né(e) le 07/03/1999 — Nationalité : française
+
+Localisation : Bordeaux | Mobilité : Bordeaux, Paris
+Disponibilité : 30/11/2026
+TJM : 340 €
+Années d'expérience : 1 ans
+
+PROFIL
+Développeur Java avec 1 ans d'expérience, intervenu(e) dans les secteurs santé.
+
+COMPÉTENCES
+Microservices, REST API, Java, Spring Boot, Angular, Kafka, Hibernate
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur Java — MedAlpha (Bordeaux)
+03/2025 – Présent
+Plateforme de paiement à fort trafic. Environnement : Microservices, Hibernate, REST API, Spring Boot.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2024)
+
+LANGUES
+Français (natif), Anglais (professionnel)

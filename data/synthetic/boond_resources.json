@@ -1,0 +1,575 @@
+[
+  {
+    "id": "R001",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Amira",
+      "lastName": "Perrin",
+      "title": "Data Scientist",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse"
+      ],
+      "skills": [
+        "Machine Learning",
+        "SQL",
+        "Python",
+        "Spark",
+        "MLOps",
+        "Deep Learning",
+        "NLP"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "immédiate",
+      "averageDailyPriceExcludingTax": 500,
+      "experiences": [
+        {
+          "title": "Data Scientist",
+          "company": "SkyPort Services",
+          "start": "11/2022",
+          "end": "Présent",
+          "description": "Classification automatique de documents"
+        },
+        {
+          "title": "Machine Learning Engineer",
+          "company": "LogiRail",
+          "start": "09/2020",
+          "end": "10/2022",
+          "description": "Scoring de churn client"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R002",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Camille",
+      "lastName": "Mansouri",
+      "title": "Ingénieur IA",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "skills": [
+        "FastAPI",
+        "LangChain",
+        "Python",
+        "LLM",
+        "Hugging Face",
+        "Docker",
+        "Prompt Engineering",
+        "NLP"
+      ],
+      "languages": [
+        "français"
+      ],
+      "availability": "18/02/2027",
+      "averageDailyPriceExcludingTax": 740,
+      "experiences": [
+        {
+          "title": "Ingénieur IA",
+          "company": "SkyPort Services",
+          "start": "08/2024",
+          "end": "Présent",
+          "description": "Extraction d'informations de contrats par LLM"
+        },
+        {
+          "title": "Ingénieur IA",
+          "company": "LogiRail",
+          "start": "10/2015",
+          "end": "07/2024",
+          "description": "Assistant RAG sur la documentation interne"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R003",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Pauline",
+      "lastName": "Bonnet",
+      "title": "Data Engineer Cloud",
+      "town": "Nantes",
+      "mobilityAreas": [
+        "Nantes",
+        "France"
+      ],
+      "skills": [
+        "SQL",
+        "Python",
+        "Spark",
+        "Airflow",
+        "dbt",
+        "BigQuery",
+        "PostgreSQL"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "04/01/2027",
+      "averageDailyPriceExcludingTax": 380,
+      "experiences": [
+        {
+          "title": "Data Engineer Cloud",
+          "company": "Pyrénées Santé",
+          "start": "06/2025",
+          "end": "Présent",
+          "description": "Modélisation des données et industrialisation des transformations"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R004",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Nicolas",
+      "lastName": "Perrin",
+      "title": "Développeur C# .NET",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse",
+        "France"
+      ],
+      "skills": [
+        "SQL Server",
+        "C#",
+        "REST API",
+        ".NET",
+        "Angular",
+        "Microservices",
+        "Git"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "immédiate",
+      "averageDailyPriceExcludingTax": 540,
+      "experiences": [
+        {
+          "title": "Développeur C# .NET",
+          "company": "Aeronov",
+          "start": "12/2024",
+          "end": "Présent",
+          "description": "Application métier de gestion des sinistres"
+        },
+        {
+          "title": "Développeur .NET",
+          "company": "Capitole Finance",
+          "start": "12/2018",
+          "end": "11/2024",
+          "description": "API de facturation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R005",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Camille",
+      "lastName": "Blanc",
+      "title": "Ingénieur QA",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse",
+        "France"
+      ],
+      "skills": [
+        "Tests automatisés",
+        "Agile Scrum",
+        "Selenium",
+        "Git",
+        "Python",
+        "JavaScript",
+        "CI/CD"
+      ],
+      "languages": [
+        "français"
+      ],
+      "availability": "19/01/2027",
+      "averageDailyPriceExcludingTax": 480,
+      "experiences": [
+        {
+          "title": "Ingénieur QA",
+          "company": "Occitel",
+          "start": "07/2023",
+          "end": "Présent",
+          "description": "Automatisation des tests de non-régression"
+        },
+        {
+          "title": "Testeur automaticien",
+          "company": "LogiRail",
+          "start": "09/2020",
+          "end": "06/2023",
+          "description": "Automatisation des tests de non-régression"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R006",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Clara",
+      "lastName": "Blanc",
+      "title": "Ingénieur QA",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse",
+        "Full remote"
+      ],
+      "skills": [
+        "Selenium",
+        "Tests automatisés",
+        "Agile Scrum",
+        "JavaScript",
+        "CI/CD"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "20/12/2026",
+      "averageDailyPriceExcludingTax": 390,
+      "experiences": [
+        {
+          "title": "Ingénieur QA",
+          "company": "Capitole Finance",
+          "start": "05/2024",
+          "end": "Présent",
+          "description": "Tests de bout en bout dans la CI"
+        },
+        {
+          "title": "QA Engineer",
+          "company": "CityMobility",
+          "start": "02/2023",
+          "end": "04/2024",
+          "description": "Tests de bout en bout dans la CI"
+        },
+        {
+          "title": "QA Engineer",
+          "company": "Aeronov",
+          "start": "10/2021",
+          "end": "01/2023",
+          "description": "Tests de bout en bout dans la CI"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R007",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Adam",
+      "lastName": "Haddad",
+      "title": "DevOps Cloud",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse",
+        "France"
+      ],
+      "skills": [
+        "Linux",
+        "Kubernetes",
+        "Docker",
+        "Prometheus",
+        "GCP",
+        "Python"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "immédiate",
+      "averageDailyPriceExcludingTax": 600,
+      "experiences": [
+        {
+          "title": "DevOps Cloud",
+          "company": "MedAlpha",
+          "start": "08/2023",
+          "end": "Présent",
+          "description": "Mise en place de la chaîne CI/CD"
+        },
+        {
+          "title": "Ingénieur SRE",
+          "company": "Occitel",
+          "start": "06/2021",
+          "end": "07/2023",
+          "description": "Mise en place de la chaîne CI/CD"
+        },
+        {
+          "title": "Ingénieur SRE",
+          "company": "Garonne Énergie",
+          "start": "05/2020",
+          "end": "05/2021",
+          "description": "Mise en place de la chaîne CI/CD"
+        },
+        {
+          "title": "Ingénieur DevOps",
+          "company": "BanqueSud",
+          "start": "05/2019",
+          "end": "04/2020",
+          "description": "Migration vers Kubernetes"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R008",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Lina",
+      "lastName": "Rousseau",
+      "title": "Machine Learning Engineer",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse"
+      ],
+      "skills": [
+        "Scikit-learn",
+        "Python",
+        "Pandas",
+        "PyTorch",
+        "Deep Learning"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "immédiate",
+      "averageDailyPriceExcludingTax": 370,
+      "experiences": [
+        {
+          "title": "Machine Learning Engineer",
+          "company": "CityMobility",
+          "start": "03/2025",
+          "end": "Présent",
+          "description": "Modèles de prévision de la demande"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R009",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Karim",
+      "lastName": "Trabelsi",
+      "title": "Développeur Back-end Java",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse",
+        "Montpellier"
+      ],
+      "skills": [
+        "REST API",
+        "Microservices",
+        "SQL",
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Angular",
+        "Scikit-learn"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "04/01/2027",
+      "averageDailyPriceExcludingTax": 510,
+      "experiences": [
+        {
+          "title": "Développeur Back-end Java",
+          "company": "Aeronov",
+          "start": "10/2022",
+          "end": "Présent",
+          "description": "Développement d'API de gestion de contrats"
+        },
+        {
+          "title": "Ingénieur Java Spring",
+          "company": "Garonne Énergie",
+          "start": "10/2020",
+          "end": "09/2022",
+          "description": "Refonte d'un monolithe en microservices"
+        },
+        {
+          "title": "Développeur Java",
+          "company": "Occitel",
+          "start": "08/2019",
+          "end": "09/2020",
+          "description": "Plateforme de paiement à fort trafic"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R010",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Thomas",
+      "lastName": "Mercier",
+      "title": "Ingénieur SRE",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse",
+        "France"
+      ],
+      "skills": [
+        "CI/CD",
+        "Linux",
+        "Docker",
+        "GCP",
+        "AWS",
+        "Python"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "immédiate",
+      "averageDailyPriceExcludingTax": 630,
+      "experiences": [
+        {
+          "title": "Ingénieur SRE",
+          "company": "AgriData Sud",
+          "start": "03/2025",
+          "end": "Présent",
+          "description": "Migration vers Kubernetes"
+        },
+        {
+          "title": "Ingénieur DevOps",
+          "company": "Aeronov",
+          "start": "05/2019",
+          "end": "02/2025",
+          "description": "Migration vers Kubernetes"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R011",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Océane",
+      "lastName": "Perrin",
+      "title": "Ingénieur IA générative",
+      "town": "Toulouse",
+      "mobilityAreas": [
+        "Toulouse"
+      ],
+      "skills": [
+        "RAG",
+        "LangChain",
+        "FastAPI",
+        "Prompt Engineering",
+        "Vector Databases",
+        "Azure"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "immédiate",
+      "averageDailyPriceExcludingTax": 610,
+      "experiences": [
+        {
+          "title": "Ingénieur IA générative",
+          "company": "AgriData Sud",
+          "start": "01/2025",
+          "end": "Présent",
+          "description": "Extraction d'informations de contrats par LLM"
+        },
+        {
+          "title": "AI Engineer",
+          "company": "AssurOuest",
+          "start": "07/2020",
+          "end": "12/2024",
+          "description": "Assistant RAG sur la documentation interne"
+        },
+        {
+          "title": "AI Engineer",
+          "company": "LogiRail",
+          "start": "03/2019",
+          "end": "06/2020",
+          "description": "Assistant RAG sur la documentation interne"
+        },
+        {
+          "title": "Ingénieur IA",
+          "company": "SkyPort Services",
+          "start": "03/2018",
+          "end": "02/2019",
+          "description": "Agent IA de qualification de tickets"
+        }
+      ]
+    }
+  },
+  {
+    "id": "R012",
+    "type": "resource",
+    "attributes": {
+      "firstName": "Julien",
+      "lastName": "Fournier",
+      "title": "Ingénieur Data",
+      "town": "Bordeaux",
+      "mobilityAreas": [
+        "Bordeaux",
+        "Toulouse"
+      ],
+      "skills": [
+        "Spark",
+        "SQL",
+        "Airflow",
+        "Python",
+        "dbt",
+        "Databricks",
+        "Snowflake",
+        "PostgreSQL"
+      ],
+      "languages": [
+        "français",
+        "anglais"
+      ],
+      "availability": "19/01/2027",
+      "averageDailyPriceExcludingTax": 500,
+      "experiences": [
+        {
+          "title": "Ingénieur Data",
+          "company": "Garonne Énergie",
+          "start": "03/2023",
+          "end": "Présent",
+          "description": "Migration d'un entrepôt de données vers le cloud"
+        },
+        {
+          "title": "Ingénieur Data",
+          "company": "CityMobility",
+          "start": "10/2020",
+          "end": "02/2023",
+          "description": "Modélisation des données et industrialisation des transformations"
+        },
+        {
+          "title": "Data Engineer Cloud",
+          "company": "AssurOuest",
+          "start": "09/2019",
+          "end": "09/2020",
+          "description": "Modélisation des données et industrialisation des transformations"
+        },
+        {
+          "title": "Data Engineer",
+          "company": "Novasys Industrie",
+          "start": "10/2018",
+          "end": "08/2019",
+          "description": "Conception de pipelines d'ingestion batch et streaming"
+        }
+      ]
+    }
+  }
+]

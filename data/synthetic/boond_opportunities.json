@@ -1,0 +1,69 @@
+[
+  {
+    "id": "O01",
+    "type": "opportunity",
+    "attributes": {
+      "title": "Ingénieur Data confirmé",
+      "company": "AgriData Sud",
+      "place": "Lyon",
+      "startDate": "2026-11-20",
+      "skills": [
+        "SQL",
+        "Spark",
+        "Python",
+        "Airflow"
+      ],
+      "averageDailyPriceExcludingTax": 500
+    }
+  },
+  {
+    "id": "O02",
+    "type": "opportunity",
+    "attributes": {
+      "title": "AI Engineer confirmé",
+      "company": "SkyPort Services",
+      "place": "Paris",
+      "startDate": "2026-12-20",
+      "skills": [
+        "LLM",
+        "LangChain",
+        "RAG",
+        "FastAPI"
+      ],
+      "averageDailyPriceExcludingTax": 580
+    }
+  },
+  {
+    "id": "O03",
+    "type": "opportunity",
+    "attributes": {
+      "title": "Ingénieur Java Spring junior",
+      "company": "AssurOuest",
+      "place": "Bordeaux",
+      "startDate": "2026-12-20",
+      "skills": [
+        "Microservices",
+        "REST API",
+        "Java",
+        "Spring Boot"
+      ],
+      "averageDailyPriceExcludingTax": 390
+    }
+  },
+  {
+    "id": "O04",
+    "type": "opportunity",
+    "attributes": {
+      "title": "Data Scientist NLP junior",
+      "company": "BanqueSud",
+      "place": "Toulouse",
+      "startDate": "2026-12-04",
+      "skills": [
+        "Scikit-learn",
+        "Python",
+        "Pandas"
+      ],
+      "averageDailyPriceExcludingTax": 420
+    }
+  }
+]

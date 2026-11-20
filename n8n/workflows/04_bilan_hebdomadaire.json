@@ -1,0 +1,151 @@
+{
+  "name": "TalentFlow 04 · Bilan hebdomadaire → direction",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "id": "53971655-252f-5207-ae12-d17fc2a679aa",
+      "name": "Chaque lundi 8h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.TF_API_BASE_URL }}/metrics/weekly",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.TF_API_KEY }}"
+            }
+          ]
+        },
+        "options": {},
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "weeks",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "id": "20416f1c-48f6-5808-83bb-c2cb003a0e84",
+      "name": "Indicateurs de la semaine",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Récapitulatif hebdomadaire pour la direction\nconst weeks = $json.weeks || [];\nconst w = weeks[weeks.length - 1] || {};\nconst pct = v => v == null ? '—' : Math.round(v * 100) + ' %';\nconst line = (k, v) => `<tr><td>${k}</td><td><b>${v ?? '—'}</b></td></tr>`;\nconst top = ($json.pool?.top_skills || []).slice(0, 5).map(s => s[0]).join(', ');\nreturn [{ json: {\n  subject: `[TalentFlow] Bilan de la semaine ${w.week || ''}`,\n  html: `<h3>Bilan TalentFlow – semaine ${w.week || ''}</h3>\n  <table border=\"1\" cellpadding=\"6\" style=\"border-collapse:collapse\">\n  ${line('Besoins clients traités', w.needs_received)}\n  ${line('CV analysés', w.cvs_ingested)}\n  ${line('Profils proposés', w.proposals)}\n  ${line('Profils validés', w.validated)}\n  ${line('Taux de validation', pct(w.validation_rate))}\n  ${line('Délai médian besoin → proposition (min)', w.median_minutes_to_proposal)}\n  ${line('Délai médian de validation (h)', w.median_hours_to_review)}\n  ${line('Temps gagné estimé (h, hypothèse à confirmer)', w.estimated_hours_saved)}\n  </table><p>Vivier : ${$json.pool?.candidates ?? 0} consultants. Compétences les plus présentes : ${top}.</p>`\n}}];"
+      },
+      "id": "2fe5b61d-e8b4-580e-9afd-9dc0e8517eea",
+      "name": "Mettre en forme le bilan",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ $env.TF_MAIL_FROM }}",
+        "toEmail": "={{ $env.TF_DIRECTION_EMAIL }}",
+        "subject": "={{ $json.subject }}",
+        "emailFormat": "html",
+        "html": "={{ $json.html }}",
+        "options": {}
+      },
+      "id": "dde13559-c624-50c6-b485-820b1210d845",
+      "name": "Envoyer à la direction",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        720,
+        300
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "REPLACE_SMTP_ID",
+          "name": "SMTP TalentFlow (Mailpit en démo)"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Chaque lundi 8h": {
+      "main": [
+        [
+          {
+            "node": "Indicateurs de la semaine",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Indicateurs de la semaine": {
+      "main": [
+        [
+          {
+            "node": "Mettre en forme le bilan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mettre en forme le bilan": {
+      "main": [
+        [
+          {
+            "node": "Envoyer à la direction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Paris"
+  },
+  "tags": [
+    {
+      "name": "talentflow"
+    },
+    {
+      "name": "pilotage"
+    }
+  ],
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

@@ -1,0 +1,2 @@
+# Installation complète (API + Postgres + interface + tests) : pip install -e ".[all]"
+-e .[all]

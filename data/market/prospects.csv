@@ -1,0 +1,13 @@
+company,sector,city,contact_role,opt_out
+Aeronov,aéronautique,Paris,DSI,false
+BanqueSud,banque,Toulouse,Responsable Data,false
+Occitel,télécoms,Toulouse,Directeur technique,false
+MedAlpha,santé,Paris,Responsable des achats IT,false
+Garonne Énergie,énergie,Toulouse,DSI,false
+Novasys Industrie,industrie,Toulouse,Responsable Data,true
+AssurOuest,assurance,Paris,Directeur technique,false
+LogiRail,transport,Toulouse,Responsable des achats IT,false
+SkyPort Services,aéronautique,Toulouse,DSI,false
+Retailia,retail,Paris,Responsable Data,false
+AgriData Sud,agroalimentaire,Toulouse,Directeur technique,false
+CityMobility,mobilité,Toulouse,Responsable des achats IT,false

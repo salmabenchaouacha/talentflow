@@ -1,0 +1,38 @@
+Yanis Rousseau
+Développeur C# .NET
+Email : yanis.rousseau@mail-perso.fr | Tél : 06 68 29 65 32
+94 allée Jean Jaurès, 75011 Paris
+
+Localisation : Paris | Mobilité : Paris, France
+Disponibilité : 19/01/2027
+TJM : 400 €
+Années d'expérience : 4 ans
+
+PROFIL
+Développeur C# .NET avec 4 ans d'expérience, intervenu(e) dans les secteurs banque, industrie, transport.
+
+COMPÉTENCES
+SQL Server, REST API, C#, Azure, Docker, Microservices, Git
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur C# .NET — LogiRail (Paris)
+09/2025 – Présent
+API de facturation. Environnement : Git, Microservices, Docker, C#.
+
+Développeur C# .NET — Capitole Finance (Paris)
+09/2024 – 08/2025
+Portail client et back-office. Environnement : C#, Azure, REST API.
+
+Développeur C# .NET — Novasys Industrie (Paris)
+08/2023 – 08/2024
+Application métier de gestion des sinistres. Environnement : Azure, C#, REST API.
+
+Ingénieur .NET Azure — Novasys Industrie (Paris)
+08/2022 – 07/2023
+Application métier de gestion des sinistres. Environnement : C#, Git, Docker, Microservices.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2021)
+
+LANGUES
+Français (natif)

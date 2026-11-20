@@ -1,0 +1,27 @@
+Emma Dubois
+Développeur Back-end Java
+Email : emma.dubois@mail-perso.fr | Tél : 06 20 30 44 67
+116 allée Jean Jaurès, 33000 Bordeaux
+Né(e) le 14/02/2001 — Nationalité : française
+
+Localisation : Bordeaux | Mobilité : Bordeaux, Full remote
+Disponibilité : immédiate
+TJM : 370 €
+Années d'expérience : 1 ans
+
+PROFIL
+Développeur Back-end Java avec 1 ans d'expérience, intervenu(e) dans les secteurs aéronautique.
+
+COMPÉTENCES
+Microservices, REST API, Java, Spring Boot, Kafka, Hibernate
+
+EXPÉRIENCES PROFESSIONNELLES
+Développeur Back-end Java — Aeronov (Bordeaux)
+08/2025 – Présent
+Refonte d'un monolithe en microservices. Environnement : Microservices, Spring Boot, Java, Hibernate.
+
+FORMATION
+Diplôme d'ingénieur en informatique (2024)
+
+LANGUES
+Français (natif), Anglais (professionnel)
